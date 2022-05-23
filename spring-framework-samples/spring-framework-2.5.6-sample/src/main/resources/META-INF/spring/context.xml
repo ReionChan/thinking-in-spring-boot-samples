@@ -11,4 +11,19 @@
     <!-- 找寻被@Component或者其派生 Annotation 标记的类（Class），将它们注册为 Spring Bean -->
     <context:component-scan base-package="thinking.in.spring.boot.samples.spring25" />
 
+    <!--
+        测试 @StringRepository 不派生 @Component，请放开下面注释替换前面的扫描元素
+
+        注意 @Component 具备两项语义：
+                1. 可扫描成候选组件
+                2. value 指定 Bean 名称
+        @StringRepository 不派生 @Component 但要达到相同功能就要将这两个语义修复
+                1. <context:include-filter> 使其拥有可扫描成候选组件语义
+                2. name-generator 属性使其 value 拥有指定 Bean 名称语义
+    -->
+<!--    <context:component-scan base-package="thinking.in.spring.boot.samples.spring25" -->
+<!--                            name-generator="thinking.in.spring.boot.samples.spring25.annotation.CustomerAnnotationBeanNameGenerator">-->
+<!--        <context:include-filter type="annotation" expression="thinking.in.spring.boot.samples.spring25.annotation.StringRepository"/>-->
+<!--    </context:component-scan>-->
+
 </beans>

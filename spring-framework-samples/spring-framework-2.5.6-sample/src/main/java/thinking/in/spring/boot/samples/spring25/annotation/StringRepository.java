@@ -17,7 +17,7 @@ import java.lang.annotation.*;
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Component // 测试多层次 @Component派生，请将当前注释
+@Component // 测试多层次 @Component派生、或自定义可扫描注解时，请将当前注释
 // @Repository // 测试多层次 @Component派生，请将当前反注释，并且将 spring-context 升级到 3.0.0.RELEASE
 public @interface StringRepository {
 
