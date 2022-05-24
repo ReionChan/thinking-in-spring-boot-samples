@@ -48,7 +48,14 @@ public class TransactionalServiceStandardAnnotationMetadataBootstrap {
     public static void main(String[] args) throws IOException {
 
         // 读取 @TransactionService AnnotationMetadata 信息
+        // Java 反射实现版本
         AnnotationMetadata annotationMetadata = new StandardAnnotationMetadata(TransactionalServiceStandardAnnotationMetadataBootstrap.class);
+
+        /*
+        // ASM 实现版本
+        MetadataReader reader = new SimpleMetadataReaderFactory().getMetadataReader(TransactionalServiceStandardAnnotationMetadataBootstrap.class.getName());
+        AnnotationMetadata annotationMetadata = reader.getAnnotationMetadata();
+        */
 
         // 获取所有的元注解类型（全类名）集合
         Set<String> metaAnnotationTypes = annotationMetadata.getAnnotationTypes()
