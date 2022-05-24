@@ -1,0 +1,138 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+title Spring 元数据相关类关系图
+
+' 某个类的元数据封装
+interface ClassMetadata {
+    【类】元数据访问接口
+    ---
+    + String getClassName()
+    + boolean isInterface()
+    + boolean isAbstract()
+    + boolean isConcrete()
+    + boolean isFinal()
+    + boolean isIndependent()
+    + boolean hasEnclosingClass()
+    + String getEnclosingClassName()
+    + boolean hasSuperClass()
+    + String getSuperClassName()
+    + String[] getInterfaceNames()
+    + String[] getMemberClassNames()
+}
+
+' 获取指定注解类型的元数据信息
+interface AnnotatedTypeMetadata {
+    指定注解类型的元数据访问接口
+    ---
+    + boolean isAnnotated(String)
+    + Map<String, Object> getAnnotationAttributes(String)
+    + Map<String, Object> getAnnotationAttributes(String, boolean)
+    + MultiValueMap<String, Object> getAllAnnotationAttributes(String)
+    + MultiValueMap<String, Object> getAllAnnotationAttributes(String, boolean)
+}
+
+' 获取某个类的元数据信息
+interface AnnotationMetadata {
+    【注解】元数据访问接口
+    ---
+    + Set<String> getAnnotationTypes()
+    + Set<String> getMetaAnnotationTypes(String)
+    + boolean hasAnnotation(String)
+    + boolean hasMetaAnnotation(String)
+    + boolean hasAnnotatedMethods(String)
+    + Set<MethodMetadata> getAnnotatedMethods(String)
+}
+
+' 方法元信息
+interface MethodMetadata {
+    【方法】元数据访问接口
+    ---
+    + String getMethodName()
+    + String getDeclaringClassName()
+    + boolean isStatic()
+    + boolean isFinal()
+    + boolean isOverridable()
+}
+
+' 元信息读取接口
+interface MetadataReader {
+    读取 Resource 文件元信息接口
+    ---
+    + Resource getResource()
+    + ClassMetadata getClassMetadata()
+    + AnnotationMetadata getAnnotationMetadata()
+}
+
+' 元信息读取接口工厂接口
+interface MetadataReaderFactory {
+    元信息读取接口工厂接口
+
+    提供按类全限定名、资源获取原信息读取接口
+    ---
+    + MetadataReader getMetadataReader(String)
+    + MetadataReader getMetadataReader(Resource)
+}
+
+' 元信息读取接口工厂实现类
+class SimpleMetadataReaderFactory {
+    元信息读取接口工厂实现类
+}
+
+' 具备缓存功能的元信息读取接口工厂实现类
+class CachingMetadataReaderFactory {
+    具备根据缓存功能的元信息读取接口工厂实现类
+
+    以 Resource 建立 MetadataReader 的索引
+    防止重复重复创建提高性能
+    ---
+    - Map<Resource, MetadataReader> metadataReaderCache
+}
+
+' ASM 方式实现
+class AnnotationMetadataReadingVisitor {
+    基于 ASM 方式实现
+    ---
+    # Set<String> annotationSet
+    # Map<String, Set<String>> metaAnnotationMap
+    # MultiValueMap<String, AnnotationAttributes> attributeMap
+    # MultiValueMap<String, MethodMetadata> methodMetadataMap
+}
+
+' 支持递归的注解元信息访问器
+class AnnotationAttributesReadingVisitor {
+    递归读取类或方法上的注解，含注解的元注解
+    ---
+}
+
+' Java 反射方式实现
+class StandardAnnotationMetadata {
+    基于 Java 反射方式实现
+    ---
+}
+
+' 默认元信息读取实现类
+class SimpleMetadataReader {
+    默认元信息读取接口的唯一实现
+    ---
+    - Resource resource
+    - ClassMetadata classMetadata
+    - AnnotationMetadata annotationMetadata
+}
+
+ClassMetadata <|-down- AnnotationMetadata : 继承
+AnnotatedTypeMetadata <|-right- AnnotationMetadata : 继承
+AnnotatedTypeMetadata <|-down- MethodMetadata : 继承
+AnnotationMetadata <|.down. StandardAnnotationMetadata : Java 反射实现
+AnnotationMetadata <|.down. AnnotationMetadataReadingVisitor : ASM 实现
+MetadataReaderFactory <|.down. SimpleMetadataReaderFactory : 唯一实现
+SimpleMetadataReaderFactory <|.down. CachingMetadataReaderFactory : 唯一实现
+CachingMetadataReaderFactory .left.> SimpleMetadataReader : 工厂创建
+MetadataReader <|.down. SimpleMetadataReader : 唯一实现
+SimpleMetadataReader -left-> ClassMetadata : 关联
+SimpleMetadataReader -left-> AnnotationMetadata : 关联
+SimpleMetadataReader .right.> AnnotationMetadataReadingVisitor : 依赖
+AnnotationAttributesReadingVisitor <.up. AnnotationMetadataReadingVisitor : visitAnnotation(String, boolean) 方法依赖
+
+
+@enduml

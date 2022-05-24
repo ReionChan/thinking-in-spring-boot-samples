@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1005px" preserveAspectRatio="none" style="width:1548px;height:1005px;" version="1.1" viewBox="0 0 1548 1005" width="1548px" zoomAndPan="magnify"><defs><filter height="300%" id="fefwevbr3f6r0" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="223" x="656" y="17.4023">Spring 元数据相关类关系图</text><!--MD5=[ff2fd0ba463dd5439b6d78dd615a5c05]
+class ClassMetadata--><rect codeLine="6" fill="#FEFECE" filter="url(#fefwevbr3f6r0)" height="216.416" id="ClassMetadata" style="stroke:#A80036;stroke-width:1.5;" width="202" x="605.5" y="218.1992"/><ellipse cx="660.25" cy="234.1992" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M656.6777,230.4644 L656.6777,228.3062 L664.0571,228.3062 L664.0571,230.4644 L661.5918,230.4644 L661.5918,238.541 L664.0571,238.541 L664.0571,240.6992 L656.6777,240.6992 L656.6777,238.541 L659.1431,238.541 L659.1431,230.4644 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="84" x="680.75" y="238.7344">ClassMetadata</text><line style="stroke:#A80036;stroke-width:1.5;" x1="606.5" x2="806.5" y1="250.1992" y2="250.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="110" x="611.5" y="264.834">【类】元数据访问接口</text><line style="stroke:#A80036;stroke-width:1.0;" x1="606.5" x2="806.5" y1="271.1543" y2="271.1543"/><ellipse cx="616.5" cy="282.1543" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="119" x="625.5" y="285.7891">String getClassName()</text><ellipse cx="616.5" cy="295.1094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="110" x="625.5" y="298.7441">boolean isInterface()</text><ellipse cx="616.5" cy="308.0645" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="109" x="625.5" y="311.6992">boolean isAbstract()</text><ellipse cx="616.5" cy="321.0195" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="112" x="625.5" y="324.6543">boolean isConcrete()</text><ellipse cx="616.5" cy="333.9746" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="625.5" y="337.6094">boolean isFinal()</text><ellipse cx="616.5" cy="346.9297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="130" x="625.5" y="350.5645">boolean isIndependent()</text><ellipse cx="616.5" cy="359.8848" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="154" x="625.5" y="363.5195">boolean hasEnclosingClass()</text><ellipse cx="616.5" cy="372.8398" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="171" x="625.5" y="376.4746">String getEnclosingClassName()</text><ellipse cx="616.5" cy="385.7949" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="133" x="625.5" y="389.4297">boolean hasSuperClass()</text><ellipse cx="616.5" cy="398.75" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="150" x="625.5" y="402.3848">String getSuperClassName()</text><ellipse cx="616.5" cy="411.7051" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="151" x="625.5" y="415.3398">String[] getInterfaceNames()</text><ellipse cx="616.5" cy="424.6602" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="176" x="625.5" y="428.2949">String[] getMemberClassNames()</text><!--MD5=[5880e079a2cd417459abcd10acfb7eb2]
+class AnnotatedTypeMetadata--><rect codeLine="24" fill="#FEFECE" filter="url(#fefwevbr3f6r0)" height="125.7305" id="AnnotatedTypeMetadata" style="stroke:#A80036;stroke-width:1.5;" width="431" x="7" y="517.6992"/><ellipse cx="147.25" cy="533.6992" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M143.6777,529.9644 L143.6777,527.8062 L151.0571,527.8062 L151.0571,529.9644 L148.5918,529.9644 L148.5918,538.041 L151.0571,538.041 L151.0571,540.1992 L143.6777,540.1992 L143.6777,538.041 L146.1431,538.041 L146.1431,529.9644 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="142" x="167.75" y="538.2344">AnnotatedTypeMetadata</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="437" y1="549.6992" y2="549.6992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="154" x="13" y="564.334">指定注解类型的元数据访问接口</text><line style="stroke:#A80036;stroke-width:1.0;" x1="8" x2="437" y1="570.6543" y2="570.6543"/><ellipse cx="18" cy="581.6543" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="151" x="27" y="585.2891">boolean isAnnotated(String)</text><ellipse cx="18" cy="594.6094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="287" x="27" y="598.2441">Map&lt;String, Object&gt; getAnnotationAttributes(String)</text><ellipse cx="18" cy="607.5645" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="336" x="27" y="611.1992">Map&lt;String, Object&gt; getAnnotationAttributes(String, boolean)</text><ellipse cx="18" cy="620.5195" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="356" x="27" y="624.1543">MultiValueMap&lt;String, Object&gt; getAllAnnotationAttributes(String)</text><ellipse cx="18" cy="633.4746" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="405" x="27" y="637.1094">MultiValueMap&lt;String, Object&gt; getAllAnnotationAttributes(String, boolean)</text><!--MD5=[9d5273ac214b8ccba3b7a05e43713bc9]
+class AnnotationMetadata--><rect codeLine="35" fill="#FEFECE" filter="url(#fefwevbr3f6r0)" height="138.6855" id="AnnotationMetadata" style="stroke:#A80036;stroke-width:1.5;" width="310" x="500.5" y="511.1992"/><ellipse cx="593.75" cy="527.1992" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M590.1777,523.4644 L590.1777,521.3062 L597.5571,521.3062 L597.5571,523.4644 L595.0918,523.4644 L595.0918,531.541 L597.5571,531.541 L597.5571,533.6992 L590.1777,533.6992 L590.1777,531.541 L592.6431,531.541 L592.6431,523.4644 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="115" x="614.25" y="531.7344">AnnotationMetadata</text><line style="stroke:#A80036;stroke-width:1.5;" x1="501.5" x2="809.5" y1="543.1992" y2="543.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="121" x="506.5" y="557.834">【注解】元数据访问接口</text><line style="stroke:#A80036;stroke-width:1.0;" x1="501.5" x2="809.5" y1="564.1543" y2="564.1543"/><ellipse cx="511.5" cy="575.1543" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="186" x="520.5" y="578.7891">Set&lt;String&gt; getAnnotationTypes()</text><ellipse cx="511.5" cy="588.1094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="243" x="520.5" y="591.7441">Set&lt;String&gt; getMetaAnnotationTypes(String)</text><ellipse cx="511.5" cy="601.0645" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="165" x="520.5" y="604.6992">boolean hasAnnotation(String)</text><ellipse cx="511.5" cy="614.0195" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="190" x="520.5" y="617.6543">boolean hasMetaAnnotation(String)</text><ellipse cx="511.5" cy="626.9746" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="207" x="520.5" y="630.6094">boolean hasAnnotatedMethods(String)</text><ellipse cx="511.5" cy="639.9297" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="284" x="520.5" y="643.5645">Set&lt;MethodMetadata&gt; getAnnotatedMethods(String)</text><!--MD5=[4b1c2afca6a8179f43b6366399bb138a]
+class MethodMetadata--><rect codeLine="47" fill="#FEFECE" filter="url(#fefwevbr3f6r0)" height="125.7305" id="MethodMetadata" style="stroke:#A80036;stroke-width:1.5;" width="196" x="124.5" y="727.1992"/><ellipse cx="169.75" cy="743.1992" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M166.1777,739.4644 L166.1777,737.3062 L173.5571,737.3062 L173.5571,739.4644 L171.0918,739.4644 L171.0918,747.541 L173.5571,747.541 L173.5571,749.6992 L166.1777,749.6992 L166.1777,747.541 L168.6431,747.541 L168.6431,739.4644 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="97" x="190.25" y="747.7344">MethodMetadata</text><line style="stroke:#A80036;stroke-width:1.5;" x1="125.5" x2="319.5" y1="759.1992" y2="759.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="121" x="130.5" y="773.834">【方法】元数据访问接口</text><line style="stroke:#A80036;stroke-width:1.0;" x1="125.5" x2="319.5" y1="780.1543" y2="780.1543"/><ellipse cx="135.5" cy="791.1543" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="130" x="144.5" y="794.7891">String getMethodName()</text><ellipse cx="135.5" cy="804.1094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="170" x="144.5" y="807.7441">String getDeclaringClassName()</text><ellipse cx="135.5" cy="817.0645" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="92" x="144.5" y="820.6992">boolean isStatic()</text><ellipse cx="135.5" cy="830.0195" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="144.5" y="833.6543">boolean isFinal()</text><ellipse cx="135.5" cy="842.9746" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="126" x="144.5" y="846.6094">boolean isOverridable()</text><!--MD5=[f706bb4dd10119cd9a37b67d65706722]
+class MetadataReader--><rect codeLine="58" fill="#FEFECE" filter="url(#fefwevbr3f6r0)" height="99.8203" id="MetadataReader" style="stroke:#A80036;stroke-width:1.5;" width="270" x="859.5" y="276.1992"/><ellipse cx="942.25" cy="292.1992" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M938.6777,288.4644 L938.6777,286.3062 L946.0571,286.3062 L946.0571,288.4644 L943.5918,288.4644 L943.5918,296.541 L946.0571,296.541 L946.0571,298.6992 L938.6777,298.6992 L938.6777,296.541 L941.1431,296.541 L941.1431,288.4644 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="96" x="962.75" y="296.7344">MetadataReader</text><line style="stroke:#A80036;stroke-width:1.5;" x1="860.5" x2="1128.5" y1="308.1992" y2="308.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="155" x="865.5" y="322.834">读取 Resource 文件元信息接口</text><line style="stroke:#A80036;stroke-width:1.0;" x1="860.5" x2="1128.5" y1="329.1543" y2="329.1543"/><ellipse cx="870.5" cy="340.1543" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="128" x="879.5" y="343.7891">Resource getResource()</text><ellipse cx="870.5" cy="353.1094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="182" x="879.5" y="356.7441">ClassMetadata getClassMetadata()</text><ellipse cx="870.5" cy="366.0645" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="244" x="879.5" y="369.6992">AnnotationMetadata getAnnotationMetadata()</text><!--MD5=[51d508c0a101ccf1608da42b9460b2b0]
+class MetadataReaderFactory--><rect codeLine="67" fill="#FEFECE" filter="url(#fefwevbr3f6r0)" height="112.7754" id="MetadataReaderFactory" style="stroke:#A80036;stroke-width:1.5;" width="274" x="1232.5" y="28.1992"/><ellipse cx="1296.75" cy="44.1992" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1293.1777,40.4644 L1293.1777,38.3062 L1300.5571,38.3062 L1300.5571,40.4644 L1298.0918,40.4644 L1298.0918,48.541 L1300.5571,48.541 L1300.5571,50.6992 L1293.1777,50.6992 L1293.1777,48.541 L1295.6431,48.541 L1295.6431,40.4644 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="137" x="1317.25" y="48.7344">MetadataReaderFactory</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1233.5" x2="1505.5" y1="60.1992" y2="60.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="121" x="1238.5" y="74.834">元信息读取接口工厂接口</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="1241.5" y="87.7891"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="220" x="1238.5" y="100.7441">提供按类全限定名、资源获取原信息读取接口</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1233.5" x2="1505.5" y1="107.0645" y2="107.0645"/><ellipse cx="1243.5" cy="118.0645" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="230" x="1252.5" y="121.6992">MetadataReader getMetadataReader(String)</text><ellipse cx="1243.5" cy="131.0195" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="248" x="1252.5" y="134.6543">MetadataReader getMetadataReader(Resource)</text><!--MD5=[243655c8d59daec1c9f592c8db494570]
+class SimpleMetadataReaderFactory--><rect codeLine="77" fill="#FEFECE" filter="url(#fefwevbr3f6r0)" height="60.9551" id="SimpleMetadataReaderFactory" style="stroke:#A80036;stroke-width:1.5;" width="207" x="1266" y="295.6992"/><ellipse cx="1281" cy="311.6992" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1283.4731,317.8423 Q1282.8921,318.1411 1282.2529,318.2905 Q1281.6138,318.4399 1280.9082,318.4399 Q1278.4014,318.4399 1277.0815,316.7881 Q1275.7617,315.1362 1275.7617,312.0151 Q1275.7617,308.8857 1277.0815,307.2339 Q1278.4014,305.582 1280.9082,305.582 Q1281.6138,305.582 1282.2612,305.7314 Q1282.9087,305.8809 1283.4731,306.1797 L1283.4731,308.9023 Q1282.8423,308.3213 1282.2488,308.0515 Q1281.6553,307.7817 1281.0244,307.7817 Q1279.6797,307.7817 1278.9949,308.8484 Q1278.3101,309.915 1278.3101,312.0151 Q1278.3101,314.1069 1278.9949,315.1736 Q1279.6797,316.2402 1281.0244,316.2402 Q1281.6553,316.2402 1282.2488,315.9705 Q1282.8423,315.7007 1283.4731,315.1196 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="175" x="1295" y="316.2344">SimpleMetadataReaderFactory</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1267" x2="1472" y1="327.6992" y2="327.6992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="1272" y="342.334">元信息读取接口工厂实现类</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1267" x2="1472" y1="348.6543" y2="348.6543"/><!--MD5=[05a56f4f7c43bb61d1ccd1e7fa2a17d5]
+class CachingMetadataReaderFactory--><rect codeLine="82" fill="#FEFECE" filter="url(#fefwevbr3f6r0)" height="112.7754" id="CachingMetadataReaderFactory" style="stroke:#A80036;stroke-width:1.5;" width="329" x="1205" y="524.1992"/><ellipse cx="1274.25" cy="540.1992" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M1276.7231,546.3423 Q1276.1421,546.6411 1275.5029,546.7905 Q1274.8638,546.9399 1274.1582,546.9399 Q1271.6514,546.9399 1270.3315,545.2881 Q1269.0117,543.6362 1269.0117,540.5151 Q1269.0117,537.3857 1270.3315,535.7339 Q1271.6514,534.082 1274.1582,534.082 Q1274.8638,534.082 1275.5112,534.2314 Q1276.1587,534.3809 1276.7231,534.6797 L1276.7231,537.4023 Q1276.0923,536.8213 1275.4988,536.5515 Q1274.9053,536.2817 1274.2744,536.2817 Q1272.9297,536.2817 1272.2449,537.3484 Q1271.5601,538.415 1271.5601,540.5151 Q1271.5601,542.6069 1272.2449,543.6736 Q1272.9297,544.7402 1274.2744,544.7402 Q1274.9053,544.7402 1275.4988,544.4705 Q1276.0923,544.2007 1276.7231,543.6196 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="182" x="1294.75" y="544.7344">CachingMetadataReaderFactory</text><line style="stroke:#A80036;stroke-width:1.5;" x1="1206" x2="1533" y1="556.1992" y2="556.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="231" x="1211" y="570.834">具备根据缓存功能的元信息读取接口工厂实现类</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="0" x="1214" y="583.7891"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="213" x="1211" y="596.7441">以 Resource 建立 MetadataReader 的索引</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="1211" y="609.6992">防止重复重复创建提高性能</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1206" x2="1533" y1="616.0195" y2="616.0195"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="1213" y="624.0195"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="303" x="1225" y="630.6543">Map&lt;Resource, MetadataReader&gt; metadataReaderCache</text><!--MD5=[354fb731ff8131b6cf2237e2820ffc7f]
+class AnnotationMetadataReadingVisitor--><rect codeLine="92" fill="#FEFECE" filter="url(#fefwevbr3f6r0)" height="112.7754" id="AnnotationMetadataReadingVisitor" style="stroke:#A80036;stroke-width:1.5;" width="361" x="802" y="733.6992"/><ellipse cx="879.25" cy="749.6992" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M881.7231,755.8423 Q881.1421,756.1411 880.5029,756.2905 Q879.8638,756.4399 879.1582,756.4399 Q876.6514,756.4399 875.3315,754.7881 Q874.0117,753.1362 874.0117,750.0151 Q874.0117,746.8857 875.3315,745.2339 Q876.6514,743.582 879.1582,743.582 Q879.8638,743.582 880.5112,743.7314 Q881.1587,743.8809 881.7231,744.1797 L881.7231,746.9023 Q881.0923,746.3213 880.4988,746.0515 Q879.9053,745.7817 879.2744,745.7817 Q877.9297,745.7817 877.2449,746.8484 Q876.5601,747.915 876.5601,750.0151 Q876.5601,752.1069 877.2449,753.1736 Q877.9297,754.2402 879.2744,754.2402 Q879.9053,754.2402 880.4988,753.9705 Q881.0923,753.7007 881.7231,753.1196 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="198" x="899.75" y="754.2344">AnnotationMetadataReadingVisitor</text><line style="stroke:#A80036;stroke-width:1.5;" x1="803" x2="1162" y1="765.6992" y2="765.6992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="95" x="808" y="780.334">基于 ASM 方式实现</text><line style="stroke:#A80036;stroke-width:1.0;" x1="803" x2="1162" y1="786.6543" y2="786.6543"/><polygon fill="none" points="813,792.6543,817,796.6543,813,800.6543,809,796.6543" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="143" x="822" y="801.2891">Set&lt;String&gt; annotationSet</text><polygon fill="none" points="813,805.6094,817,809.6094,813,813.6094,809,809.6094" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="255" x="822" y="814.2441">Map&lt;String, Set&lt;String&gt;&gt; metaAnnotationMap</text><polygon fill="none" points="813,818.5645,817,822.5645,813,826.5645,809,822.5645" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="318" x="822" y="827.1992">MultiValueMap&lt;String, AnnotationAttributes&gt; attributeMap</text><polygon fill="none" points="813,831.5195,817,835.5195,813,839.5195,809,835.5195" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="335" x="822" y="840.1543">MultiValueMap&lt;String, MethodMetadata&gt; methodMetadataMap</text><!--MD5=[f699870a7b327406321ad2828ca4e804]
+class AnnotationAttributesReadingVisitor--><rect codeLine="102" fill="#FEFECE" filter="url(#fefwevbr3f6r0)" height="60.9551" id="AnnotationAttributesReadingVisitor" style="stroke:#A80036;stroke-width:1.5;" width="232" x="866.5" y="930.1992"/><ellipse cx="881.5" cy="946.1992" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M883.9731,952.3423 Q883.3921,952.6411 882.7529,952.7905 Q882.1138,952.9399 881.4082,952.9399 Q878.9014,952.9399 877.5815,951.2881 Q876.2617,949.6362 876.2617,946.5151 Q876.2617,943.3857 877.5815,941.7339 Q878.9014,940.082 881.4082,940.082 Q882.1138,940.082 882.7612,940.2314 Q883.4087,940.3809 883.9731,940.6797 L883.9731,943.4023 Q883.3423,942.8213 882.7488,942.5515 Q882.1553,942.2817 881.5244,942.2817 Q880.1797,942.2817 879.4949,943.3484 Q878.8101,944.415 878.8101,946.5151 Q878.8101,948.6069 879.4949,949.6736 Q880.1797,950.7402 881.5244,950.7402 Q882.1553,950.7402 882.7488,950.4705 Q883.3423,950.2007 883.9731,949.6196 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="200" x="895.5" y="950.7344">AnnotationAttributesReadingVisitor</text><line style="stroke:#A80036;stroke-width:1.5;" x1="867.5" x2="1097.5" y1="962.1992" y2="962.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="220" x="872.5" y="976.834">递归读取类或方法上的注解，含注解的元注解</text><line style="stroke:#A80036;stroke-width:1.0;" x1="867.5" x2="1097.5" y1="983.1543" y2="983.1543"/><!--MD5=[2e15d7327850b93e2e1f3fcfb4d7cea0]
+class StandardAnnotationMetadata--><rect codeLine="108" fill="#FEFECE" filter="url(#fefwevbr3f6r0)" height="60.9551" id="StandardAnnotationMetadata" style="stroke:#A80036;stroke-width:1.5;" width="199" x="556" y="759.6992"/><ellipse cx="571" cy="775.6992" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M573.4731,781.8423 Q572.8921,782.1411 572.2529,782.2905 Q571.6138,782.4399 570.9082,782.4399 Q568.4014,782.4399 567.0815,780.7881 Q565.7617,779.1362 565.7617,776.0151 Q565.7617,772.8857 567.0815,771.2339 Q568.4014,769.582 570.9082,769.582 Q571.6138,769.582 572.2612,769.7314 Q572.9087,769.8809 573.4731,770.1797 L573.4731,772.9023 Q572.8423,772.3213 572.2488,772.0515 Q571.6553,771.7817 571.0244,771.7817 Q569.6797,771.7817 568.9949,772.8484 Q568.3101,773.915 568.3101,776.0151 Q568.3101,778.1069 568.9949,779.1736 Q569.6797,780.2402 571.0244,780.2402 Q571.6553,780.2402 572.2488,779.9705 Q572.8423,779.7007 573.4731,779.1196 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="167" x="585" y="780.2344">StandardAnnotationMetadata</text><line style="stroke:#A80036;stroke-width:1.5;" x1="557" x2="754" y1="791.6992" y2="791.6992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="115" x="562" y="806.334">基于 Java 反射方式实现</text><line style="stroke:#A80036;stroke-width:1.0;" x1="557" x2="754" y1="812.6543" y2="812.6543"/><!--MD5=[25c076203452655c8b360c974e9c7d8b]
+class SimpleMetadataReader--><rect codeLine="114" fill="#FEFECE" filter="url(#fefwevbr3f6r0)" height="99.8203" id="SimpleMetadataReader" style="stroke:#A80036;stroke-width:1.5;" width="243" x="873" y="530.6992"/><ellipse cx="923.25" cy="546.6992" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M925.7231,552.8423 Q925.1421,553.1411 924.5029,553.2905 Q923.8638,553.4399 923.1582,553.4399 Q920.6514,553.4399 919.3315,551.7881 Q918.0117,550.1362 918.0117,547.0151 Q918.0117,543.8857 919.3315,542.2339 Q920.6514,540.582 923.1582,540.582 Q923.8638,540.582 924.5112,540.7314 Q925.1587,540.8809 925.7231,541.1797 L925.7231,543.9023 Q925.0923,543.3213 924.4988,543.0515 Q923.9053,542.7817 923.2744,542.7817 Q921.9297,542.7817 921.2449,543.8484 Q920.5601,544.915 920.5601,547.0151 Q920.5601,549.1069 921.2449,550.1736 Q921.9297,551.2402 923.2744,551.2402 Q923.9053,551.2402 924.4988,550.9705 Q925.0923,550.7007 925.7231,550.1196 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="134" x="943.75" y="551.2344">SimpleMetadataReader</text><line style="stroke:#A80036;stroke-width:1.5;" x1="874" x2="1115" y1="562.6992" y2="562.6992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="154" x="879" y="577.334">默认元信息读取接口的唯一实现</text><line style="stroke:#A80036;stroke-width:1.0;" x1="874" x2="1115" y1="583.6543" y2="583.6543"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="881" y="591.6543"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="101" x="893" y="598.2891">Resource resource</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="881" y="604.6094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="155" x="893" y="611.2441">ClassMetadata classMetadata</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="881" y="617.5645"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="217" x="893" y="624.1992">AnnotationMetadata annotationMetadata</text><!--MD5=[8251446df5502c222fe5610081732969]
+reverse link ClassMetadata to AnnotationMetadata--><path codeLine="122" d="M680.85,454.1792 C676.9,473.7392 672.96,493.2692 669.4,510.8992 " fill="none" id="ClassMetadata-backto-AnnotationMetadata" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="674.05,452.4992,684.87,434.2792,687.77,455.2692,674.05,452.4992" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="679.5" y="477.7676">继承</text><!--MD5=[d9eee92d9e6e6e8283cc0b5ef3b0274a]
+reverse link AnnotatedTypeMetadata to AnnotationMetadata--><path codeLine="123" d="M458.2,580.6992 C472.42,580.6992 486.52,580.6992 500.27,580.6992 " fill="none" id="AnnotatedTypeMetadata-backto-AnnotationMetadata" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="458.05,587.6992,438.05,580.6992,458.05,573.6992,458.05,587.6992" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="456.25" y="574.2676">继承</text><!--MD5=[a1f6d91f8433d658f1d6d69031816b8a]
+reverse link AnnotatedTypeMetadata to MethodMetadata--><path codeLine="124" d="M222.5,663.9892 C222.5,684.9792 222.5,707.1892 222.5,726.9892 " fill="none" id="AnnotatedTypeMetadata-backto-MethodMetadata" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="215.5,663.9592,222.5,643.9592,229.5,663.9592,215.5,663.9592" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="223.5" y="693.7676">继承</text><!--MD5=[7d55758a350b09a25bbf1bc5ea7c3aed]
+reverse link AnnotationMetadata to StandardAnnotationMetadata--><path codeLine="125" d="M655.5,670.2792 C655.5,702.2292 655.5,736.1492 655.5,759.5492 " fill="none" id="AnnotationMetadata-backto-StandardAnnotationMetadata" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="648.5,670.2192,655.5,650.2192,662.5,670.2192,648.5,670.2192" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="81" x="656.5" y="693.7676">Java 反射实现</text><!--MD5=[29ad07e7f8449ccf61fa6e436f83c6b0]
+reverse link AnnotationMetadata to AnnotationMetadataReadingVisitor--><path codeLine="126" d="M780.47,660.9992 C818.59,685.1892 859.67,711.2592 894.77,733.5292 " fill="none" id="AnnotationMetadata-backto-AnnotationMetadataReadingVisitor" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="776.61,666.8392,763.48,650.2192,784.12,655.0192,776.61,666.8392" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="57" x="830.5" y="693.7676">ASM 实现</text><!--MD5=[62a97f48a1e7a1b38364f4c24eeddf8b]
+reverse link MetadataReaderFactory to SimpleMetadataReaderFactory--><path codeLine="127" d="M1369.5,161.3292 C1369.5,206.7992 1369.5,262.1392 1369.5,295.4692 " fill="none" id="MetadataReaderFactory-backto-SimpleMetadataReaderFactory" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="1362.5,161.2492,1369.5,141.2492,1376.5,161.2492,1362.5,161.2492" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="1370.5" y="184.7676">唯一实现</text><!--MD5=[7ef3d5ad57cc46f0e4042f77666f2360]
+reverse link SimpleMetadataReaderFactory to CachingMetadataReaderFactory--><path codeLine="128" d="M1369.5,377.4492 C1369.5,419.7592 1369.5,480.2192 1369.5,523.9992 " fill="none" id="SimpleMetadataReaderFactory-backto-CachingMetadataReaderFactory" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="1362.5,377.1592,1369.5,357.1592,1376.5,377.1592,1362.5,377.1592" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="1370.5" y="477.7676">唯一实现</text><!--MD5=[357265a394bbdba8925b40ca8ac698b5]
+reverse link SimpleMetadataReader to CachingMetadataReaderFactory--><path codeLine="129" d="M1121.57,580.6992 C1148.29,580.6992 1176.85,580.6992 1204.72,580.6992 " fill="none" id="SimpleMetadataReader-backto-CachingMetadataReaderFactory" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="1116.25,580.6992,1125.25,584.6992,1121.25,580.6992,1125.25,576.6992,1116.25,580.6992" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="1134.5" y="574.2676">工厂创建</text><!--MD5=[c84cff379789cc0d726e430d2fd16003]
+reverse link MetadataReader to SimpleMetadataReader--><path codeLine="130" d="M994.5,396.6492 C994.5,439.1192 994.5,492.4292 994.5,530.5392 " fill="none" id="MetadataReader-backto-SimpleMetadataReader" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="987.5,396.4792,994.5,376.4792,1001.5,396.4792,987.5,396.4792" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="995.5" y="477.7676">唯一实现</text><!--MD5=[892b91a1549933f86348a93b96b4932b]
+reverse link ClassMetadata to SimpleMetadataReader--><path codeLine="131" d="M811.51,419.2592 C854.46,456.9192 902.42,498.9692 938.46,530.5692 " fill="none" id="ClassMetadata-backto-SimpleMetadataReader" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="807.63,415.8692,811.7524,424.8138,811.3867,419.1688,817.0317,418.8031,807.63,415.8692" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="877.5" y="477.7676">关联</text><!--MD5=[e22a47018dd1ada9bb4c04fca2a59520]
+reverse link AnnotationMetadata to SimpleMetadataReader--><path codeLine="132" d="M816.01,580.6992 C835.17,580.6992 854.49,580.6992 872.97,580.6992 " fill="none" id="AnnotationMetadata-backto-SimpleMetadataReader" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="810.61,580.6992,819.61,584.6992,815.61,580.6992,819.61,576.6992,810.61,580.6992" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="828.75" y="574.2676">关联</text><!--MD5=[a33ba3c5a67872a502d8b6e8285af8b4]
+link SimpleMetadataReader to AnnotationMetadataReadingVisitor--><path codeLine="133" d="M991.66,630.8692 C989.97,659.9892 987.82,697.1192 986.03,728.1092 " fill="none" id="SimpleMetadataReader-to-AnnotationMetadataReadingVisitor" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="985.73,733.4192,990.2384,724.6628,986.0161,728.4274,982.2515,724.2051,985.73,733.4192" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="989.5" y="693.7676">依赖</text><!--MD5=[15dafa45e9975ba29b1d64690ef2bc6a]
+link AnnotationMetadataReadingVisitor to AnnotationAttributesReadingVisitor--><path codeLine="134" d="M982.5,846.8392 C982.5,872.5792 982.5,902.3492 982.5,924.8592 " fill="none" id="AnnotationMetadataReadingVisitor-to-AnnotationAttributesReadingVisitor" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="982.5,930.1292,986.5,921.1292,982.5,925.1292,978.5,921.1292,982.5,930.1292" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="256" x="983.5" y="896.7676">visitAnnotation(String, boolean) 方法依赖</text><!--MD5=[8e2d7aad07635d2066192a41afa9593a]
+@startuml
+'https://plantuml.com/class-diagram
+
+title Spring 元数据相关类关系图
+
+' 某个类的元数据封装
+interface ClassMetadata {
+    【类】元数据访问接口
+    - - -
+    + String getClassName()
+    + boolean isInterface()
+    + boolean isAbstract()
+    + boolean isConcrete()
+    + boolean isFinal()
+    + boolean isIndependent()
+    + boolean hasEnclosingClass()
+    + String getEnclosingClassName()
+    + boolean hasSuperClass()
+    + String getSuperClassName()
+    + String[] getInterfaceNames()
+    + String[] getMemberClassNames()
+}
+
+' 获取指定注解类型的元数据信息
+interface AnnotatedTypeMetadata {
+    指定注解类型的元数据访问接口
+    - - -
+    + boolean isAnnotated(String)
+    + Map<String, Object> getAnnotationAttributes(String)
+    + Map<String, Object> getAnnotationAttributes(String, boolean)
+    + MultiValueMap<String, Object> getAllAnnotationAttributes(String)
+    + MultiValueMap<String, Object> getAllAnnotationAttributes(String, boolean)
+}
+
+' 获取某个类的元数据信息
+interface AnnotationMetadata {
+    【注解】元数据访问接口
+    - - -
+    + Set<String> getAnnotationTypes()
+    + Set<String> getMetaAnnotationTypes(String)
+    + boolean hasAnnotation(String)
+    + boolean hasMetaAnnotation(String)
+    + boolean hasAnnotatedMethods(String)
+    + Set<MethodMetadata> getAnnotatedMethods(String)
+}
+
+' 方法元信息
+interface MethodMetadata {
+    【方法】元数据访问接口
+    - - -
+    + String getMethodName()
+    + String getDeclaringClassName()
+    + boolean isStatic()
+    + boolean isFinal()
+    + boolean isOverridable()
+}
+
+' 元信息读取接口
+interface MetadataReader {
+    读取 Resource 文件元信息接口
+    - - -
+    + Resource getResource()
+    + ClassMetadata getClassMetadata()
+    + AnnotationMetadata getAnnotationMetadata()
+}
+
+' 元信息读取接口工厂接口
+interface MetadataReaderFactory {
+    元信息读取接口工厂接口
+
+    提供按类全限定名、资源获取原信息读取接口
+    - - -
+    + MetadataReader getMetadataReader(String)
+    + MetadataReader getMetadataReader(Resource)
+}
+
+' 元信息读取接口工厂实现类
+class SimpleMetadataReaderFactory {
+    元信息读取接口工厂实现类
+}
+
+' 具备缓存功能的元信息读取接口工厂实现类
+class CachingMetadataReaderFactory {
+    具备根据缓存功能的元信息读取接口工厂实现类
+
+    以 Resource 建立 MetadataReader 的索引
+    防止重复重复创建提高性能
+    - - -
+    - Map<Resource, MetadataReader> metadataReaderCache
+}
+
+' ASM 方式实现
+class AnnotationMetadataReadingVisitor {
+    基于 ASM 方式实现
+    - - -
+    # Set<String> annotationSet
+    # Map<String, Set<String>> metaAnnotationMap
+    # MultiValueMap<String, AnnotationAttributes> attributeMap
+    # MultiValueMap<String, MethodMetadata> methodMetadataMap
+}
+
+' 支持递归的注解元信息访问器
+class AnnotationAttributesReadingVisitor {
+    递归读取类或方法上的注解，含注解的元注解
+    - - -
+}
+
+' Java 反射方式实现
+class StandardAnnotationMetadata {
+    基于 Java 反射方式实现
+    - - -
+}
+
+' 默认元信息读取实现类
+class SimpleMetadataReader {
+    默认元信息读取接口的唯一实现
+    - - -
+    - Resource resource
+    - ClassMetadata classMetadata
+    - AnnotationMetadata annotationMetadata
+}
+
+ClassMetadata <|-down- AnnotationMetadata : 继承
+AnnotatedTypeMetadata <|-right- AnnotationMetadata : 继承
+AnnotatedTypeMetadata <|-down- MethodMetadata : 继承
+AnnotationMetadata <|.down. StandardAnnotationMetadata : Java 反射实现
+AnnotationMetadata <|.down. AnnotationMetadataReadingVisitor : ASM 实现
+MetadataReaderFactory <|.down. SimpleMetadataReaderFactory : 唯一实现
+SimpleMetadataReaderFactory <|.down. CachingMetadataReaderFactory : 唯一实现
+CachingMetadataReaderFactory .left.> SimpleMetadataReader : 工厂创建
+MetadataReader <|.down. SimpleMetadataReader : 唯一实现
+SimpleMetadataReader -left-> ClassMetadata : 关联
+SimpleMetadataReader -left-> AnnotationMetadata : 关联
+SimpleMetadataReader .right.> AnnotationMetadataReadingVisitor : 依赖
+AnnotationAttributesReadingVisitor <.up. AnnotationMetadataReadingVisitor : visitAnnotation(String, boolean) 方法依赖
+
+
+@enduml
+
+@startuml
+
+title Spring 元数据相关类关系图
+
+interface ClassMetadata {
+    【类】元数据访问接口
+    - - -
+    + String getClassName()
+    + boolean isInterface()
+    + boolean isAbstract()
+    + boolean isConcrete()
+    + boolean isFinal()
+    + boolean isIndependent()
+    + boolean hasEnclosingClass()
+    + String getEnclosingClassName()
+    + boolean hasSuperClass()
+    + String getSuperClassName()
+    + String[] getInterfaceNames()
+    + String[] getMemberClassNames()
+}
+
+interface AnnotatedTypeMetadata {
+    指定注解类型的元数据访问接口
+    - - -
+    + boolean isAnnotated(String)
+    + Map<String, Object> getAnnotationAttributes(String)
+    + Map<String, Object> getAnnotationAttributes(String, boolean)
+    + MultiValueMap<String, Object> getAllAnnotationAttributes(String)
+    + MultiValueMap<String, Object> getAllAnnotationAttributes(String, boolean)
+}
+
+interface AnnotationMetadata {
+    【注解】元数据访问接口
+    - - -
+    + Set<String> getAnnotationTypes()
+    + Set<String> getMetaAnnotationTypes(String)
+    + boolean hasAnnotation(String)
+    + boolean hasMetaAnnotation(String)
+    + boolean hasAnnotatedMethods(String)
+    + Set<MethodMetadata> getAnnotatedMethods(String)
+}
+
+interface MethodMetadata {
+    【方法】元数据访问接口
+    - - -
+    + String getMethodName()
+    + String getDeclaringClassName()
+    + boolean isStatic()
+    + boolean isFinal()
+    + boolean isOverridable()
+}
+
+interface MetadataReader {
+    读取 Resource 文件元信息接口
+    - - -
+    + Resource getResource()
+    + ClassMetadata getClassMetadata()
+    + AnnotationMetadata getAnnotationMetadata()
+}
+
+interface MetadataReaderFactory {
+    元信息读取接口工厂接口
+
+    提供按类全限定名、资源获取原信息读取接口
+    - - -
+    + MetadataReader getMetadataReader(String)
+    + MetadataReader getMetadataReader(Resource)
+}
+
+class SimpleMetadataReaderFactory {
+    元信息读取接口工厂实现类
+}
+
+class CachingMetadataReaderFactory {
+    具备根据缓存功能的元信息读取接口工厂实现类
+
+    以 Resource 建立 MetadataReader 的索引
+    防止重复重复创建提高性能
+    - - -
+    - Map<Resource, MetadataReader> metadataReaderCache
+}
+
+class AnnotationMetadataReadingVisitor {
+    基于 ASM 方式实现
+    - - -
+    # Set<String> annotationSet
+    # Map<String, Set<String>> metaAnnotationMap
+    # MultiValueMap<String, AnnotationAttributes> attributeMap
+    # MultiValueMap<String, MethodMetadata> methodMetadataMap
+}
+
+class AnnotationAttributesReadingVisitor {
+    递归读取类或方法上的注解，含注解的元注解
+    - - -
+}
+
+class StandardAnnotationMetadata {
+    基于 Java 反射方式实现
+    - - -
+}
+
+class SimpleMetadataReader {
+    默认元信息读取接口的唯一实现
+    - - -
+    - Resource resource
+    - ClassMetadata classMetadata
+    - AnnotationMetadata annotationMetadata
+}
+
+ClassMetadata <|-down- AnnotationMetadata : 继承
+AnnotatedTypeMetadata <|-right- AnnotationMetadata : 继承
+AnnotatedTypeMetadata <|-down- MethodMetadata : 继承
+AnnotationMetadata <|.down. StandardAnnotationMetadata : Java 反射实现
+AnnotationMetadata <|.down. AnnotationMetadataReadingVisitor : ASM 实现
+MetadataReaderFactory <|.down. SimpleMetadataReaderFactory : 唯一实现
+SimpleMetadataReaderFactory <|.down. CachingMetadataReaderFactory : 唯一实现
+CachingMetadataReaderFactory .left.> SimpleMetadataReader : 工厂创建
+MetadataReader <|.down. SimpleMetadataReader : 唯一实现
+SimpleMetadataReader -left-> ClassMetadata : 关联
+SimpleMetadataReader -left-> AnnotationMetadata : 关联
+SimpleMetadataReader .right.> AnnotationMetadataReadingVisitor : 依赖
+AnnotationAttributesReadingVisitor <.up. AnnotationMetadataReadingVisitor : visitAnnotation(String, boolean) 方法依赖
+
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 18:25:05 CST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: zh
+Country: CN
+--></g></svg>
