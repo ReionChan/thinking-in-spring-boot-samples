@@ -17,6 +17,9 @@
 package thinking.in.spring.boot.samples.autoconfigure.formatter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.boot.autoconfigure.AutoConfigureBefore;
+import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
@@ -40,6 +43,8 @@ import org.springframework.context.annotation.Configuration;
 @ConditionalOnResource(resources = "META-INF/spring.factories")
 @ConditionalOnNotWebApplication
 @ConditionalOnExpression("${formatter.enabled:true}")
+@AutoConfigureOrder(-100)
+@AutoConfigureBefore(name = "org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration")
 public class FormatterAutoConfiguration {
 
     /**
