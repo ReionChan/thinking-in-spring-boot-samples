@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="747px" preserveAspectRatio="none" style="width:945px;height:747px;" version="1.1" viewBox="0 0 945 747" width="945px" zoomAndPan="magnify"><defs><filter height="300%" id="f1wla11myfk4uf" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="184" x="374.25" y="17.4023">Spring 事件/监听 机制</text><!--MD5=[c11be9bec5de8c51ffe61f9e862967e2]
+class EventObject--><rect codeLine="10" fill="#FEFECE" filter="url(#f1wla11myfk4uf)" height="60.9551" id="EventObject" style="stroke:#A80036;stroke-width:1.5;" width="101" x="830.5" y="672.1992"/><ellipse cx="845.5" cy="688.1992" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M847.9731,694.3423 Q847.3921,694.6411 846.7529,694.7905 Q846.1138,694.9399 845.4082,694.9399 Q842.9014,694.9399 841.5815,693.2881 Q840.2617,691.6362 840.2617,688.5151 Q840.2617,685.3857 841.5815,683.7339 Q842.9014,682.082 845.4082,682.082 Q846.1138,682.082 846.7612,682.2314 Q847.4087,682.3809 847.9731,682.6797 L847.9731,685.4023 Q847.3423,684.8213 846.7488,684.5515 Q846.1553,684.2817 845.5244,684.2817 Q844.1797,684.2817 843.4949,685.3484 Q842.8101,686.415 842.8101,688.5151 Q842.8101,690.6069 843.4949,691.6736 Q844.1797,692.7402 845.5244,692.7402 Q846.1553,692.7402 846.7488,692.4705 Q847.3423,692.2007 847.9731,691.6196 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="69" x="859.5" y="692.7344">EventObject</text><line style="stroke:#A80036;stroke-width:1.5;" x1="831.5" x2="930.5" y1="704.1992" y2="704.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="44" x="836.5" y="718.834">事件对象</text><line style="stroke:#A80036;stroke-width:1.5;" x1="831.5" x2="930.5" y1="725.1543" y2="725.1543"/><!--MD5=[3f1f667093ac5dd29bf30e4706ab1668]
+class ApplicationEvent--><rect codeLine="15" fill="#FEFECE" filter="url(#f1wla11myfk4uf)" height="60.9551" id="ApplicationEvent" style="stroke:#A80036;stroke-width:1.5;" width="127" x="668.5" y="672.1992"/><ellipse cx="683.5" cy="688.1992" fill="#A9DCDF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M683.6133,683.7974 L682.4595,688.8691 L684.7754,688.8691 Z M682.1191,681.5562 L685.1157,681.5562 L688.4609,693.9492 L686.0122,693.9492 L685.2485,690.8862 L681.9697,690.8862 L681.2227,693.9492 L678.7739,693.9492 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="95" x="697.5" y="692.7344">ApplicationEvent</text><line style="stroke:#A80036;stroke-width:1.5;" x1="669.5" x2="794.5" y1="704.1992" y2="704.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="77" x="674.5" y="718.834">抽象的应用事件</text><line style="stroke:#A80036;stroke-width:1.5;" x1="669.5" x2="794.5" y1="725.1543" y2="725.1543"/><!--MD5=[820bb9143ef7f656648bf8997140735b]
+class EventListener--><rect codeLine="20" fill="#FEFECE" filter="url(#f1wla11myfk4uf)" height="60.9551" id="EventListener" style="stroke:#A80036;stroke-width:1.5;" width="108" x="7" y="531.6992"/><ellipse cx="22" cy="547.6992" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M18.4277,543.9644 L18.4277,541.8062 L25.8071,541.8062 L25.8071,543.9644 L23.3418,543.9644 L23.3418,552.041 L25.8071,552.041 L25.8071,554.1992 L18.4277,554.1992 L18.4277,552.041 L20.8931,552.041 L20.8931,543.9644 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="76" x="36" y="552.2344">EventListener</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="114" y1="563.6992" y2="563.6992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="55" x="13" y="578.334">事件监听器</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="114" y1="584.6543" y2="584.6543"/><!--MD5=[01b428c4836c281a09c686a2c06b2da0]
+class ApplicationListener--><rect codeLine="25" fill="#FEFECE" filter="url(#f1wla11myfk4uf)" height="73.9102" id="ApplicationListener" style="stroke:#A80036;stroke-width:1.5;" width="301" x="150.5" y="525.1992"/><ellipse cx="165.5" cy="541.1992" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M161.9277,537.4644 L161.9277,535.3062 L169.3071,535.3062 L169.3071,537.4644 L166.8418,537.4644 L166.8418,545.541 L169.3071,545.541 L169.3071,547.6992 L161.9277,547.6992 L161.9277,545.541 L164.3931,545.541 L164.3931,537.4644 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="109" x="179.5" y="545.7344">ApplicationListener</text><rect fill="#FFFFFF" height="16.1328" style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" width="158" x="296.5" y="522.1992"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="156" x="297.5" y="534.8008">E extends ApplicationEvent</text><line style="stroke:#A80036;stroke-width:1.5;" x1="151.5" x2="450.5" y1="557.1992" y2="557.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="55" x="156.5" y="571.834">应用监听器</text><line style="stroke:#A80036;stroke-width:1.0;" x1="151.5" x2="450.5" y1="578.1543" y2="578.1543"/><ellipse cx="161.5" cy="589.1543" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="144" x="170.5" y="592.7891">void onApplicationEvent(E)</text><!--MD5=[4f831e048505be76609cbc4e29b4ef1d]
+class ApplicationEventMulticaster--><rect codeLine="32" fill="#FEFECE" filter="url(#f1wla11myfk4uf)" height="99.8203" id="ApplicationEventMulticaster" style="stroke:#A80036;stroke-width:1.5;" width="311" x="431.5" y="28.1992"/><ellipse cx="504.25" cy="44.1992" fill="#B4A7E5" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M500.6777,40.4644 L500.6777,38.3062 L508.0571,38.3062 L508.0571,40.4644 L505.5918,40.4644 L505.5918,48.541 L508.0571,48.541 L508.0571,50.6992 L500.6777,50.6992 L500.6777,48.541 L503.1431,48.541 L503.1431,40.4644 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="157" x="524.75" y="48.7344">ApplicationEventMulticaster</text><line style="stroke:#A80036;stroke-width:1.5;" x1="432.5" x2="741.5" y1="60.1992" y2="60.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="129" x="437.5" y="74.834">管理 ApplicationListener</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="206" x="437.5" y="87.7891">关播 ApplicationEvent 给所管理的监听器</text><line style="stroke:#A80036;stroke-width:1.0;" x1="432.5" x2="741.5" y1="94.1094" y2="94.1094"/><ellipse cx="442.5" cy="105.1094" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="285" x="451.5" y="108.7441">void addApplicationListener(ApplicationListener&lt;?&gt;)</text><ellipse cx="442.5" cy="118.0645" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="202" x="451.5" y="121.6992">void multicastEvent(ApplicationEvent)</text><!--MD5=[4e736cf516a51317ed0ab9f39e028569]
+class AbstractApplicationEventMulticaster--><rect codeLine="41" fill="#FEFECE" filter="url(#f1wla11myfk4uf)" height="107.8203" id="AbstractApplicationEventMulticaster" style="stroke:#A80036;stroke-width:1.5;" width="340" x="417" y="189.1992"/><ellipse cx="480.25" cy="205.1992" fill="#A9DCDF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M480.3633,200.7974 L479.2095,205.8691 L481.5254,205.8691 Z M478.8691,198.5562 L481.8657,198.5562 L485.2109,210.9492 L482.7622,210.9492 L481.9985,207.8862 L478.7197,207.8862 L477.9727,210.9492 L475.5239,210.9492 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="205" x="500.75" y="209.7344">AbstractApplicationEventMulticaster</text><line style="stroke:#A80036;stroke-width:1.5;" x1="418" x2="756" y1="221.1992" y2="221.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="423" y="235.834">提供基础的监听器注册功能</text><line style="stroke:#A80036;stroke-width:1.0;" x1="418" x2="756" y1="242.1543" y2="242.1543"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="425" y="250.1543"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="179" x="437" y="256.7891">ListenerRetriever defaultRetriever</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="425" y="263.1094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="314" x="437" y="269.7441">Map&lt;ListenerCacheKey, ListenerRetriever&gt; retrieverCache</text><line style="stroke:#A80036;stroke-width:1.0;" x1="418" x2="756" y1="276.0645" y2="276.0645"/><polygon fill="#FFFF44" points="428,282.0645,432,286.0645,428,290.0645,424,286.0645" style="stroke:#B38D22;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="314" x="437" y="290.6992">getApplicationListeners(ApplicationEvent, ResolvableType)</text><!--MD5=[329844e92566e8e98e1fab441912897f]
+class ListenerCacheKey--><rect codeLine="51" fill="#FEFECE" filter="url(#f1wla11myfk4uf)" height="99.8203" id="ListenerCacheKey" style="stroke:#A80036;stroke-width:1.5;" width="167" x="202.5" y="193.1992"/><ellipse cx="232.8" cy="209.1992" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M235.2731,215.3423 Q234.6921,215.6411 234.0529,215.7905 Q233.4138,215.9399 232.7082,215.9399 Q230.2014,215.9399 228.8815,214.2881 Q227.5617,212.6362 227.5617,209.5151 Q227.5617,206.3857 228.8815,204.7339 Q230.2014,203.082 232.7082,203.082 Q233.4138,203.082 234.0612,203.2314 Q234.7087,203.3809 235.2731,203.6797 L235.2731,206.4023 Q234.6423,205.8213 234.0488,205.5515 Q233.4553,205.2817 232.8244,205.2817 Q231.4797,205.2817 230.7949,206.3484 Q230.1101,207.415 230.1101,209.5151 Q230.1101,211.6069 230.7949,212.6736 Q231.4797,213.7402 232.8244,213.7402 Q233.4553,213.7402 234.0488,213.4705 Q234.6423,213.2007 235.2731,212.6196 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="101" x="250.2" y="213.7344">ListenerCacheKey</text><line style="stroke:#A80036;stroke-width:1.5;" x1="203.5" x2="368.5" y1="225.1992" y2="225.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="154" x="208.5" y="239.834">事件类型与事件源类型组合对象</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="132" x="208.5" y="252.7891">查找监听器列表的索引 Key</text><line style="stroke:#A80036;stroke-width:1.0;" x1="203.5" x2="368.5" y1="259.1094" y2="259.1094"/><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="210.5" y="267.1094"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="141" x="222.5" y="273.7441">ResolvableType eventType</text><rect fill="none" height="6" style="stroke:#C82930;stroke-width:1.0;" width="6" x="210.5" y="280.0645"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="118" x="222.5" y="286.6992">Class&lt;?&gt; sourceType</text><!--MD5=[768b3d88abe4f4d2a8701756ee1c6719]
+class ListenerRetriever--><rect codeLine="60" fill="#FEFECE" filter="url(#f1wla11myfk4uf)" height="73.9102" id="ListenerRetriever" style="stroke:#A80036;stroke-width:1.5;" width="298" x="152" y="374.1992"/><ellipse cx="248.25" cy="390.1992" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M250.7231,396.3423 Q250.1421,396.6411 249.5029,396.7905 Q248.8638,396.9399 248.1582,396.9399 Q245.6514,396.9399 244.3315,395.2881 Q243.0117,393.6362 243.0117,390.5151 Q243.0117,387.3857 244.3315,385.7339 Q245.6514,384.082 248.1582,384.082 Q248.8638,384.082 249.5112,384.2314 Q250.1587,384.3809 250.7231,384.6797 L250.7231,387.4023 Q250.0923,386.8213 249.4988,386.5515 Q248.9053,386.2817 248.2744,386.2817 Q246.9297,386.2817 246.2449,387.3484 Q245.5601,388.415 245.5601,390.5151 Q245.5601,392.6069 246.2449,393.6736 Q246.9297,394.7402 248.2744,394.7402 Q248.9053,394.7402 249.4988,394.4705 Q250.0923,394.2007 250.7231,393.6196 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="97" x="268.75" y="394.7344">ListenerRetriever</text><line style="stroke:#A80036;stroke-width:1.5;" x1="153" x2="449" y1="406.1992" y2="406.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="121" x="158" y="420.834">封装监听器集合的帮助类</text><line style="stroke:#A80036;stroke-width:1.0;" x1="153" x2="449" y1="427.1543" y2="427.1543"/><ellipse cx="163" cy="438.1543" fill="none" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="272" x="172" y="441.7891">Set&lt;ApplicationListener&lt;?&gt;&gt; applicationListeners</text><!--MD5=[95d9bfbd5f75fc5bd7d508ea594470fc]
+class SimpleApplicationEventMulticaster--><rect codeLine="67" fill="#FEFECE" filter="url(#f1wla11myfk4uf)" height="73.9102" id="SimpleApplicationEventMulticaster" style="stroke:#A80036;stroke-width:1.5;" width="228" x="618" y="525.1992"/><ellipse cx="633.45" cy="541.1992" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M635.9231,547.3423 Q635.3421,547.6411 634.7029,547.7905 Q634.0638,547.9399 633.3582,547.9399 Q630.8514,547.9399 629.5315,546.2881 Q628.2117,544.6362 628.2117,541.5151 Q628.2117,538.3857 629.5315,536.7339 Q630.8514,535.082 633.3582,535.082 Q634.0638,535.082 634.7112,535.2314 Q635.3587,535.3809 635.9231,535.6797 L635.9231,538.4023 Q635.2923,537.8213 634.6988,537.5515 Q634.1053,537.2817 633.4744,537.2817 Q632.1297,537.2817 631.4449,538.3484 Q630.7601,539.415 630.7601,541.5151 Q630.7601,543.6069 631.4449,544.6736 Q632.1297,545.7402 633.4744,545.7402 Q634.1053,545.7402 634.6988,545.4705 Q635.2923,545.2007 635.9231,544.6196 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="195" x="647.55" y="545.7344">SimpleApplicationEventMulticaster</text><line style="stroke:#A80036;stroke-width:1.5;" x1="619" x2="845" y1="557.1992" y2="557.1992"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="624" y="571.834">广播器的具体实现类</text><line style="stroke:#A80036;stroke-width:1.0;" x1="619" x2="845" y1="578.1543" y2="578.1543"/><ellipse cx="629" cy="589.1543" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="202" x="638" y="592.7891">void multicastEvent(ApplicationEvent)</text><path d="M628,375.6992 L628,446.9414 L884,446.9414 L884,385.6992 L874,375.6992 L628,375.6992 " fill="#FBFB77" filter="url(#f1wla11myfk4uf)" style="stroke:#A80036;stroke-width:1.0;"/><path d="M874,375.6992 L874,385.6992 L884,385.6992 L874,375.6992 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="235" x="634" y="393.2676">调用父类 getApplicationListeners 方法</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="222" x="634" y="408.5781">构造事件 key 对象 ListenerCacheKey</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="150" x="634" y="423.8887">在 retrieverCache 中查找</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="217" x="634" y="439.1992">获得 ListenerRetriever 中监听器集合</text><!--MD5=[d31373f9ea003a8c9b8d1d7fac0637e0]
+link ApplicationEvent to EventObject--><path codeLine="75" d="M795.73,702.6992 C800.6,702.6992 805.47,702.6992 810.35,702.6992 " fill="none" id="ApplicationEvent-to-EventObject" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="810.37,695.6992,830.37,702.6992,810.37,709.6992,810.37,695.6992" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0613453e9527e7c160d7b7c39aa9ea81]
+reverse link EventListener to ApplicationListener--><path codeLine="76" d="M135.5,562.1992 C140.39,562.1992 145.29,562.1992 150.18,562.1992 " fill="none" id="EventListener-backto-ApplicationListener" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="135.38,569.1992,115.38,562.1992,135.37,555.1992,135.38,569.1992" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e87d5f409413cddc01703fb1da911c70]
+reverse link ApplicationEventMulticaster to AbstractApplicationEventMulticaster--><path codeLine="77" d="M587,148.5592 C587,162.1192 587,176.1292 587,189.0492 " fill="none" id="ApplicationEventMulticaster-backto-AbstractApplicationEventMulticaster" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="580,148.5492,587,128.5492,594,148.5492,580,148.5492" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[199270d39c26d0e997c0526635237aee]
+reverse link AbstractApplicationEventMulticaster to ListenerRetriever--><path codeLine="78" d="M484.06,303.9492 C443.63,327.4092 398.56,353.5792 363.25,374.0692 " fill="none" id="AbstractApplicationEventMulticaster-backto-ListenerRetriever" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="495.33,297.4092,488.1327,296.9631,484.9527,303.4352,492.15,303.8813,495.33,297.4092" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="445" y="340.7676">获取列表</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="475.6702" y="317.5284">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="34" x="337.593" y="363.4458">many</text><!--MD5=[0a972561068d0fcbada09c489c56553f]
+link ListenerCacheKey to AbstractApplicationEventMulticaster--><path codeLine="79" d="M369.85,243.1992 C384.72,243.1992 400.68,243.1992 416.95,243.1992 " fill="none" id="ListenerCacheKey-AbstractApplicationEventMulticaster" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="386.75,233.6992,395.7951,236.6381,395.7951,230.7603,386.75,233.6992" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="48" x="377.7385" y="257.4817">创建Key</text><!--MD5=[1c34ca8034b01328792e9d12dff01fc0]
+link ListenerCacheKey to ListenerRetriever--><path codeLine="80" d="M290.46,293.5592 C292.79,319.3592 295.6,350.3892 297.72,373.9492 " fill="none" id="ListenerCacheKey-ListenerRetriever" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="299.4497,340.679,301.5632,331.4062,295.7092,331.9349,299.4497,340.679" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="263.3658" y="313.5723">查找</text><!--MD5=[306381c8d295036b3a698e1d73b4c3b2]
+reverse link AbstractApplicationEventMulticaster to SimpleApplicationEventMulticaster--><path codeLine="81" d="M569.64,317.3592 C563.81,357.9292 563.1,408.1192 583,448.1992 C599.17,480.7692 629.72,506.4692 658.96,525.0692 " fill="none" id="AbstractApplicationEventMulticaster-backto-SimpleApplicationEventMulticaster" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="562.77,315.9692,573.01,297.4192,576.58,318.3092,562.77,315.9692" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="584" y="416.2676">继承</text><!--MD5=[59a7cd1eaa3063cbd993b4cbba1f8240]
+link SimpleApplicationEventMulticaster to ApplicationEvent--><path codeLine="82" d="M732,599.2292 C732,620.0592 732,646.1592 732,666.7992 " fill="none" id="SimpleApplicationEventMulticaster-to-ApplicationEvent" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="732,671.9292,736,662.9292,732,666.9292,728,662.9292,732,671.9292" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="737,640.6992,739.9389,631.6541,734.0611,631.6541,737,640.6992" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="675.3688" y="619.7651">广播事件</text><!--MD5=[6edb8f94731c4125444206b2d2f25631]
+reverse link ListenerRetriever to ApplicationListener--><path codeLine="83" d="M301,461.3892 C301,482.1292 301,505.8392 301,524.9492 " fill="none" id="ListenerRetriever-backto-ApplicationListener" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#FFFFFF" points="301,448.2692,297,454.2692,301,460.2692,305,454.2692,301,448.2692" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="26" x="302" y="491.7676">管理</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="292.2875" y="468.8123">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="34" x="263.9719" y="514.5821">many</text><!--MD5=[05d196e90df0a73c619bb795979387ed]
+reverse link ApplicationListener to SimpleApplicationEventMulticaster--><path codeLine="84" d="M456.87,562.1992 C510.02,562.1992 568.42,562.1992 617.69,562.1992 " fill="none" id="ApplicationListener-backto-SimpleApplicationEventMulticaster" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="451.74,562.1992,460.74,566.1992,456.74,562.1992,460.74,558.1992,451.74,562.1992" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="469.75" y="555.7676">迭代广播事件给监听器</text><!--MD5=[0509035614994f4f5d515cd65b19c85e]
+link n1 to SimpleApplicationEventMulticaster--><path codeLine="86" d="M750.43,446.7592 C746.65,470.2292 741.66,501.2092 737.83,525.0092 " fill="none" id="n1-SimpleApplicationEventMulticaster" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><!--MD5=[3f2f67dae8d8bb9d0331be945b124f71]
+link AbstractApplicationEventMulticaster to n1--><path codeLine="87" d="M641.4,297.6392 C667.46,323.2292 697.9,353.1292 720.86,375.6792 " fill="none" id="AbstractApplicationEventMulticaster-n1" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><!--MD5=[bae63abf4ac66867545eabdaf020f33e]
+@startuml
+
+title Spring 事件/监听 机制
+
+/' - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    Spring 事件、事件广播器、事件监听器相关类
+   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -'/
+
+
+' JDK 自带事件对象
+class EventObject {
+    事件对象
+}
+
+' 抽象的应用事件对象
+abstract class ApplicationEvent {
+    抽象的应用事件
+}
+
+' JDK 自带事件监听器
+interface EventListener {
+    事件监听器
+}
+
+' 应用监听器接口
+interface ApplicationListener<E extends ApplicationEvent> {
+    应用监听器
+    - -
+    + void onApplicationEvent(E)
+}
+
+' 管理 ApplicationListener 监听器及广播相应事件给监听器
+interface ApplicationEventMulticaster {
+    管理 ApplicationListener
+    关播 ApplicationEvent 给所管理的监听器
+    - -
+    + void addApplicationListener(ApplicationListener<?>)
+    + void multicastEvent(ApplicationEvent)
+}
+
+' ApplicationEventMulticaster 接口的抽象实现类
+abstract class AbstractApplicationEventMulticaster {
+    提供基础的监听器注册功能
+    - -
+    - ListenerRetriever defaultRetriever
+    - Map<ListenerCacheKey, ListenerRetriever> retrieverCache
+    - -
+    # getApplicationListeners(ApplicationEvent, ResolvableType)
+}
+
+' 监听器缓存 Key
+class ListenerCacheKey {
+    事件类型与事件源类型组合对象
+    查找监听器列表的索引 Key
+    - -
+    - ResolvableType eventType
+    - Class<?> sourceType
+}
+
+' AbstractApplicationEventMulticaster 的内部类
+class ListenerRetriever {
+    封装监听器集合的帮助类
+    - -
+    + Set<ApplicationListener<?>> applicationListeners
+}
+
+' ApplicationEventMulticaster 接口的简单实现类
+class SimpleApplicationEventMulticaster {
+    广播器的具体实现类
+    - -
+    + void multicastEvent(ApplicationEvent)
+}
+
+
+' Spring 应用事件、事件广播及激发事件监听器相关类
+EventObject <|-left- ApplicationEvent
+EventListener <|-right- ApplicationListener
+ApplicationEventMulticaster <|.. AbstractApplicationEventMulticaster
+AbstractApplicationEventMulticaster "1" o-right- "many" ListenerRetriever : "获取列表"
+AbstractApplicationEventMulticaster -left- ListenerCacheKey : "创建Key" >
+ListenerCacheKey  -down-  ListenerRetriever : "查找" >
+AbstractApplicationEventMulticaster <|-down- SimpleApplicationEventMulticaster : "继承"
+SimpleApplicationEventMulticaster .down.> ApplicationEvent : "广播事件" >
+ListenerRetriever "1" o-down- "many" ApplicationListener : "管理"
+SimpleApplicationEventMulticaster .left.> ApplicationListener : "迭代广播事件给监听器"
+note "调用父类 getApplicationListeners 方法\n构造事件 key 对象 ListenerCacheKey\n在 retrieverCache 中查找\n获得 ListenerRetriever 中监听器集合" as n1
+n1 .down. SimpleApplicationEventMulticaster
+n1 .up. AbstractApplicationEventMulticaster
+
+@enduml
+
+@startuml
+
+title Spring 事件/监听 机制
+
+
+
+class EventObject {
+    事件对象
+}
+
+abstract class ApplicationEvent {
+    抽象的应用事件
+}
+
+interface EventListener {
+    事件监听器
+}
+
+interface ApplicationListener<E extends ApplicationEvent> {
+    应用监听器
+    - -
+    + void onApplicationEvent(E)
+}
+
+interface ApplicationEventMulticaster {
+    管理 ApplicationListener
+    关播 ApplicationEvent 给所管理的监听器
+    - -
+    + void addApplicationListener(ApplicationListener<?>)
+    + void multicastEvent(ApplicationEvent)
+}
+
+abstract class AbstractApplicationEventMulticaster {
+    提供基础的监听器注册功能
+    - -
+    - ListenerRetriever defaultRetriever
+    - Map<ListenerCacheKey, ListenerRetriever> retrieverCache
+    - -
+    # getApplicationListeners(ApplicationEvent, ResolvableType)
+}
+
+class ListenerCacheKey {
+    事件类型与事件源类型组合对象
+    查找监听器列表的索引 Key
+    - -
+    - ResolvableType eventType
+    - Class<?> sourceType
+}
+
+class ListenerRetriever {
+    封装监听器集合的帮助类
+    - -
+    + Set<ApplicationListener<?>> applicationListeners
+}
+
+class SimpleApplicationEventMulticaster {
+    广播器的具体实现类
+    - -
+    + void multicastEvent(ApplicationEvent)
+}
+
+
+EventObject <|-left- ApplicationEvent
+EventListener <|-right- ApplicationListener
+ApplicationEventMulticaster <|.. AbstractApplicationEventMulticaster
+AbstractApplicationEventMulticaster "1" o-right- "many" ListenerRetriever : "获取列表"
+AbstractApplicationEventMulticaster -left- ListenerCacheKey : "创建Key" >
+ListenerCacheKey  -down-  ListenerRetriever : "查找" >
+AbstractApplicationEventMulticaster <|-down- SimpleApplicationEventMulticaster : "继承"
+SimpleApplicationEventMulticaster .down.> ApplicationEvent : "广播事件" >
+ListenerRetriever "1" o-down- "many" ApplicationListener : "管理"
+SimpleApplicationEventMulticaster .left.> ApplicationListener : "迭代广播事件给监听器"
+note "调用父类 getApplicationListeners 方法\n构造事件 key 对象 ListenerCacheKey\n在 retrieverCache 中查找\n获得 ListenerRetriever 中监听器集合" as n1
+n1 .down. SimpleApplicationEventMulticaster
+n1 .up. AbstractApplicationEventMulticaster
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 18:25:05 CST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: zh
+Country: CN
+--></g></svg>

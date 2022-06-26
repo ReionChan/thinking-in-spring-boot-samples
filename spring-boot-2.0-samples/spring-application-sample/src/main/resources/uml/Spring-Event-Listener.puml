@@ -1,0 +1,90 @@
+@startuml
+
+title Spring 事件/监听 机制
+
+/' ----------------------------------------------------------
+    Spring 事件、事件广播器、事件监听器相关类
+   ----------------------------------------------------------'/
+
+
+' JDK 自带事件对象
+class EventObject {
+    事件对象
+}
+
+' 抽象的应用事件对象
+abstract class ApplicationEvent {
+    抽象的应用事件
+}
+
+' JDK 自带事件监听器
+interface EventListener {
+    事件监听器
+}
+
+' 应用监听器接口
+interface ApplicationListener<E extends ApplicationEvent> {
+    应用监听器
+    --
+    + void onApplicationEvent(E)
+}
+
+' 管理 ApplicationListener 监听器及广播相应事件给监听器
+interface ApplicationEventMulticaster {
+    管理 ApplicationListener
+    关播 ApplicationEvent 给所管理的监听器
+    --
+    + void addApplicationListener(ApplicationListener<?>)
+    + void multicastEvent(ApplicationEvent)
+}
+
+' ApplicationEventMulticaster 接口的抽象实现类
+abstract class AbstractApplicationEventMulticaster {
+    提供基础的监听器注册功能
+    --
+    - ListenerRetriever defaultRetriever
+    - Map<ListenerCacheKey, ListenerRetriever> retrieverCache
+    --
+    # getApplicationListeners(ApplicationEvent, ResolvableType)
+}
+
+' 监听器缓存 Key
+class ListenerCacheKey {
+    事件类型与事件源类型组合对象
+    查找监听器列表的索引 Key
+    --
+    - ResolvableType eventType
+    - Class<?> sourceType
+}
+
+' AbstractApplicationEventMulticaster 的内部类
+class ListenerRetriever {
+    封装监听器集合的帮助类
+    --
+    + Set<ApplicationListener<?>> applicationListeners
+}
+
+' ApplicationEventMulticaster 接口的简单实现类
+class SimpleApplicationEventMulticaster {
+    广播器的具体实现类
+    --
+    + void multicastEvent(ApplicationEvent)
+}
+
+
+' Spring 应用事件、事件广播及激发事件监听器相关类
+EventObject <|-left- ApplicationEvent
+EventListener <|-right- ApplicationListener
+ApplicationEventMulticaster <|.. AbstractApplicationEventMulticaster
+AbstractApplicationEventMulticaster "1" o-right- "many" ListenerRetriever : "获取列表"
+AbstractApplicationEventMulticaster -left- ListenerCacheKey : "创建Key" >
+ListenerCacheKey  -down-  ListenerRetriever : "查找" >
+AbstractApplicationEventMulticaster <|-down- SimpleApplicationEventMulticaster : "继承"
+SimpleApplicationEventMulticaster .down.> ApplicationEvent : "广播事件" >
+ListenerRetriever "1" o-down- "many" ApplicationListener : "管理"
+SimpleApplicationEventMulticaster .left.> ApplicationListener : "迭代广播事件给监听器"
+note "调用父类 getApplicationListeners 方法\n构造事件 key 对象 ListenerCacheKey\n在 retrieverCache 中查找\n获得 ListenerRetriever 中监听器集合" as n1
+n1 .down. SimpleApplicationEventMulticaster
+n1 .up. AbstractApplicationEventMulticaster
+
+@enduml
