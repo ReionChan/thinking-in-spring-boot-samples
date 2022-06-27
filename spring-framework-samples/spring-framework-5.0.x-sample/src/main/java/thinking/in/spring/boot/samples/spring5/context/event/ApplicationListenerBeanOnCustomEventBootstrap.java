@@ -32,16 +32,19 @@ public class ApplicationListenerBeanOnCustomEventBootstrap {
         context.publishEvent(new MyApplicationEvent("Hello World Again"));
     }
 
+    // 自定义事件
     public static class MyApplicationEvent extends ApplicationEvent {
-
+        // 父类必须指定事件源
         public MyApplicationEvent(String source) {
             super(source);
         }
     }
 
+    // 定义指定监听事件为自定义事件的监听器，通过泛型参数设定监听类型
     public static class MyApplicationListener implements ApplicationListener<MyApplicationEvent> {
 
         @Override
+        // 方法参数类型为类上泛型所设定的事件类型
         public void onApplicationEvent(MyApplicationEvent event) {
             System.out.println(event.getClass().getSimpleName());
         }
