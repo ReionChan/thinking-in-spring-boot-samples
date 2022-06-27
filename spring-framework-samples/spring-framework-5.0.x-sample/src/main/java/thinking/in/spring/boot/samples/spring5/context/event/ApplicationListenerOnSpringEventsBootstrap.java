@@ -3,6 +3,8 @@ package thinking.in.spring.boot.samples.spring5.context.event;
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
 
 /**
@@ -18,8 +20,12 @@ import org.springframework.context.support.GenericApplicationContext;
 public class ApplicationListenerOnSpringEventsBootstrap {
 
     public static void main(String[] args) {
-        // 创建 ConfigurableApplicationContext 实例 GenericApplicationContext
+        // 创建 ConfigurableApplicationContext 实例 GenericApplicationContext， 不支持多次 refresh
         ConfigurableApplicationContext context = new GenericApplicationContext();
+
+        // 创建 ConfigurableApplicationContext 实例 ClassPathXmlApplicationContext，支持多次执行 refresh
+        // ConfigurableApplicationContext context = new ClassPathXmlApplicationContext();
+
         System.out.println("创建 Spring 应用上下文 : " + context.getDisplayName());
         // 添加 ApplicationListener 非泛型实现
         context.addApplicationListener(event ->
@@ -36,15 +42,21 @@ public class ApplicationListenerOnSpringEventsBootstrap {
         context.stop();    // 发布 ContextStoppedEvent
         System.out.println("应用上下文已停止启动...");
 
+
         // start(): 启动应用上下文
         System.out.println("应用上下文准备启动启动...");
         context.start();  // 发布 ContextStartedEvent
         System.out.println("应用上下文已启动启动...");
+
 
         // close() : 关闭应用上下文
         System.out.println("应用上下文准备关闭...");
         context.close();  // 发布 ContextClosedEvent
         System.out.println("应用上下文已关闭...");
 
+        // refresh() : 再次初始化应用上下文
+        // System.out.println("应用上下文再次准备初始化...");
+        // context.refresh(); // 发布 ContextRefreshedEvent
+        // System.out.println("应用上下文已再次初始化...");
     }
 }
