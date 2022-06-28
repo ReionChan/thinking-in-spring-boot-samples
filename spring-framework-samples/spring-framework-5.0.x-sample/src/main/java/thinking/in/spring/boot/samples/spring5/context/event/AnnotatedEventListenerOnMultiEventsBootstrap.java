@@ -38,34 +38,23 @@ public class AnnotatedEventListenerOnMultiEventsBootstrap {
      */
     public static class MyMultiEventsListener {
 
-        /**
-         * 无参数监听 {@link ContextRefreshedEvent} 和 {@link ContextClosedEvent} 事件
-         */
+        // 设置无参形式
         @EventListener({ContextRefreshedEvent.class, ContextClosedEvent.class})
         public void onEvent() {
             System.out.println("onEvent");
         }
 
-        /**
-         * 单一 {@link ApplicationContextEvent} 参数监听 {@link ContextRefreshedEvent} 和 {@link ContextClosedEvent} 事件
-         *
-         * @param event {@link ApplicationContextEvent}
-         */
+        // 设置单个参数，此参数类型为两个事件的父类
         @EventListener({ContextRefreshedEvent.class, ContextClosedEvent.class})
         public void onApplicationContextEvent(ApplicationContextEvent event) {
             System.out.println("onApplicationContextEvent : " + event.getClass().getSimpleName());
         }
 
-//        /**
-//         * {@link ContextRefreshedEvent} 和 {@link ContextClosedEvent} 参数监听
-//         *
-//         * @param refreshedEvent     {@link ContextRefreshedEvent}
-//         * @param contextClosedEvent {@link ContextClosedEvent}
-//         */
-//        @EventListener({ContextRefreshedEvent.class, ContextClosedEvent.class})
-//        public void onEvents(ContextRefreshedEvent refreshedEvent, ContextClosedEvent contextClosedEvent) {
-//            System.out.println("onEvents : " + refreshedEvent.getClass().getSimpleName()
-//                    + " , " + contextClosedEvent.getClass().getSimpleName());
-//        }
+        // 设置两个参数，报错：Maximum one parameter is allowed for event listener method
+        @EventListener({ContextRefreshedEvent.class, ContextClosedEvent.class})
+        public void onEvents(ContextRefreshedEvent refreshedEvent, ContextClosedEvent contextClosedEvent) {
+            System.out.println("onEvents : " + refreshedEvent.getClass().getSimpleName()
+                    + " , " + contextClosedEvent.getClass().getSimpleName());
+        }
     }
 }

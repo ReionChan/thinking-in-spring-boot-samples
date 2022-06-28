@@ -32,13 +32,46 @@ public class AnnotatedAsyncEventListenerBootstrap {
 
     @EnableAsync // 需要激活异步，否则 @Async 无效
     public static class MyAsyncEventListener {
+/*
+        @EventListener(ContextRefreshedEvent.class)
+        @Async
+        // 1. 原始类型返回值的方法
+        // 运行期 AopInvocationExceptionNull 异常： return value from advice does not match primitive return type
+        public boolean ontextPrimitiveTypeRefreshedEvent(ContextRefreshedEvent event) {
+            println(" MyAsyncEventListener on primitive boolean type: " + event.getClass().getSimpleName());
+            return true;
+        }
+ */
+        @EventListener(ContextRefreshedEvent.class)
+        @Async
+        // 2. 装箱后的返回值类型的方法
+        public Boolean ontextRefreshedEvent(ContextRefreshedEvent event) {
+            println(" MyAsyncEventListener on boxing Boolean type: " + event.getClass().getSimpleName());
+            return true;
+        }
 
         @EventListener(ContextRefreshedEvent.class)
         @Async
-        public Boolean ontextRefreshedEvent(ContextRefreshedEvent event) {
-            println(" MyAsyncEventListener : " + event.getClass().getSimpleName());
-            return true;
+        // 3. protected 访问修饰符的方法
+        protected void ontextProtectedRefreshedEvent(ContextRefreshedEvent event) {
+            println(" MyAsyncEventListener on protected Method: " + event.getClass().getSimpleName());
         }
+
+        @EventListener(ContextRefreshedEvent.class)
+        @Async
+        // 4. default 的方法
+        void ontextDefaultRefreshedEvent(ContextRefreshedEvent event) {
+            println(" MyAsyncEventListener on default Method: " + event.getClass().getSimpleName());
+        }
+/*
+        @EventListener(ContextRefreshedEvent.class)
+        @Async
+        // 5. private 访问修饰符的方法
+        // 编译报错：@Async 要求方法必须能被重写，private 方法不支持
+        private void ontextPrivateRefreshedEvent(ContextRefreshedEvent event) {
+            println(" MyAsyncEventListener on private Method: " + event.getClass().getSimpleName());
+        }
+ */
     }
 
     /**
