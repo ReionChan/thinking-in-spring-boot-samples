@@ -2,6 +2,7 @@ package thinking.in.spring.boot.samples.spring5.context.event;
 
 import org.springframework.context.ApplicationEvent;
 import org.springframework.context.ApplicationListener;
+import org.springframework.context.PayloadApplicationEvent;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.event.EventListener;
 import org.springframework.core.ResolvableType;
@@ -39,19 +40,31 @@ public class GenericEventListenerBootstrap {
 public static class UserEventListener implements ApplicationListener<GenericEvent<User>> {
 
     @EventListener
+    // 注解形式监听非事件类型的对象
     public void onUser(User user) {
         System.out.println("onUser : " + user);
     }
 
     @EventListener
+    // 注解形式监听自定义的泛型事件
     public void onUserEvent(GenericEvent<User> event) {
         System.out.println("onUserEvent : " + event.getSource());
     }
 
     @Override
+    // 接口形式监听自定义的泛型事件
     public void onApplicationEvent(GenericEvent<User> event) {
         System.out.println("onApplicationEvent : " + event.getSource());
     }
+
+/*
+    @Override
+    // 接口形式监听非时间类型的对象，借由 PayloadApplicationEvent
+    // 【注意】需要将 UserEventListener 的 implements 修改为 ApplicationListener<PayloadApplicationEvent>
+    public void onApplicationEvent(PayloadApplicationEvent event) {
+        System.out.println("onApplicationEvent : " + event.getPayload());
+    }
+ */
 }
 
     /**
@@ -76,6 +89,7 @@ public static class UserEventListener implements ApplicationListener<GenericEven
      *
      * @param <T> 泛型类型
      */
+    // PayloadApplicationEvent 也实现 ResolvableTypeProvider 来达到提取泛型参数实际类型
     public static class GenericEvent<T>
             extends ApplicationEvent implements ResolvableTypeProvider {
 
