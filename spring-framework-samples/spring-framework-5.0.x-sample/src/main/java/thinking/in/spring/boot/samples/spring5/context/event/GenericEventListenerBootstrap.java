@@ -59,7 +59,7 @@ public static class UserEventListener implements ApplicationListener<GenericEven
 
 /*
     @Override
-    // 接口形式监听非时间类型的对象，借由 PayloadApplicationEvent
+    // 接口形式监听非事件类型的对象，借由 PayloadApplicationEvent
     // 【注意】需要将 UserEventListener 的 implements 修改为 ApplicationListener<PayloadApplicationEvent>
     public void onApplicationEvent(PayloadApplicationEvent event) {
         System.out.println("onApplicationEvent : " + event.getPayload());
