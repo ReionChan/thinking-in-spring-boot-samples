@@ -34,6 +34,8 @@ public class AnnotatedEventListenerBootstrap {
      * {@link EventListener} 抽象类
      */
     public static abstract class AbstractEventListener {
+
+        // 1. 抽象类中方法也可以
         @EventListener(ContextRefreshedEvent.class)
         public void onContextRefreshedEvent(ContextRefreshedEvent event) {
             System.out.println("AbstractEventListener : " + event.getClass().getSimpleName());
@@ -45,10 +47,29 @@ public class AnnotatedEventListenerBootstrap {
      */
     public static class MyEventListener extends AbstractEventListener {
 
+        // 2. 带返回值的 public 方法也可以
         @EventListener(ContextClosedEvent.class)
         public boolean onContextClosedEvent(ContextClosedEvent event) {
-            System.out.println("MyEventListener : " + event.getClass().getSimpleName());
+            System.out.println("MyEventListener on public boolean Method: " + event.getClass().getSimpleName());
             return true;
+        }
+
+        // 3. protected 方法也可以
+        @EventListener(ContextClosedEvent.class)
+        protected void onProtectedContextClosedEvent(ContextClosedEvent event) {
+            System.out.println("MyEventListener on protected Method: " + event.getClass().getSimpleName());
+        }
+
+        // 4. default 方法也可以
+        @EventListener(ContextClosedEvent.class)
+        void onDefaultContextClosedEvent(ContextClosedEvent event) {
+            System.out.println("MyEventListener on default Method: " + event.getClass().getSimpleName());
+        }
+
+        // 5. 甚至 private 方法也可以
+        @EventListener(ContextClosedEvent.class)
+        private void onPrivateContextClosedEvent(ContextClosedEvent event) {
+            System.out.println("MyEventListener on private Method: " + event.getClass().getSimpleName());
         }
     }
 }
