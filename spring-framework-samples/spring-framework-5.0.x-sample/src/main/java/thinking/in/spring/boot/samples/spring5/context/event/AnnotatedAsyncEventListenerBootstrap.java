@@ -19,20 +19,13 @@ import org.springframework.scheduling.annotation.EnableAsync;
  * @see Async
  * @since 1.0.0
  */
-@Configuration
 public class AnnotatedAsyncEventListenerBootstrap {
-
-    @Bean
-    public TaskExecutor taskExecutor() {
-        return new SimpleAsyncTaskExecutor("T-");
-    }
 
     public static void main(String[] args) {
         // 创建 注解驱动 Spring 应用上下文
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         // 注册 异步 @EventListener 类 MyAsyncEventListener
         context.register(MyAsyncEventListener.class);
-        context.register(AnnotatedAsyncEventListenerBootstrap.class);
         println(" Spring 应用上下文正在初始化...");
         // 初始化上下文
         context.refresh();
@@ -42,18 +35,19 @@ public class AnnotatedAsyncEventListenerBootstrap {
 
     @EnableAsync() // 需要激活异步，否则 @Async 无效
     public static class MyAsyncEventListener {
-
+        /*
         @EventListener(ContextRefreshedEvent.class)
-        //@Async
+        @Async
         // 1. 原始类型返回值的方法
-        // 运行期 AopInvocationExceptionNull 异常： return value from advice does not match primitive return type
+        // 运行期 AopInvocationException 异常：Null return value from advice does not match primitive return type
         public boolean onPrimitiveTypeContextRefreshedEvent(ContextRefreshedEvent event) {
             println(" MyAsyncEventListener on primitive boolean type: " + event.getClass().getSimpleName());
             return true;
         }
+        */
 
         @EventListener(ContextRefreshedEvent.class)
-//        @Async
+        @Async
         // 2. 装箱后的返回值类型的方法
         public Boolean onContextRefreshedEvent(ContextRefreshedEvent event) {
             println(" MyAsyncEventListener on boxing Boolean type: " + event.getClass().getSimpleName());
@@ -61,26 +55,29 @@ public class AnnotatedAsyncEventListenerBootstrap {
         }
 
         @EventListener(ContextRefreshedEvent.class)
-        //@Async
+        @Async
         // 3. protected 访问修饰符的方法
         protected void onProtectedContextRefreshedEvent(ContextRefreshedEvent event) {
             println(" MyAsyncEventListener on protected Method: " + event.getClass().getSimpleName());
         }
 
         @EventListener(ContextRefreshedEvent.class)
-        //@Async
+        @Async
         // 4. default 的方法
         void onDefaultContextRefreshedEvent(ContextRefreshedEvent event) {
             println(" MyAsyncEventListener on default Method: " + event.getClass().getSimpleName());
         }
 
+        /*
         @EventListener(ContextRefreshedEvent.class)
-        //@Async
+        @Async
         // 5. private 访问修饰符的方法
-        // 编译报错：@Async 要求方法必须能被重写，private 方法不支持
-        private static void onPrivateContextRefreshedEvent(ContextRefreshedEvent event) {
+        // 编译报错：@Async 要求方法必须能被重写，private 或 static 方法不支持
+        private void onPrivateContextRefreshedEvent(ContextRefreshedEvent event) {
             println(" MyAsyncEventListener on private Method: " + event.getClass().getSimpleName());
         }
+         */
+
     }
 
     /**
