@@ -1,0 +1,75 @@
+@startuml
+
+header "@ReionChan"
+footer "@ReionChan"
+
+box "<font size=25>Spring Boot" #lightgreen
+participant SpringApplication as SA
+participant ApplicationListener as AL
+participant EventPublishingRunListener as EPRL
+participant SimpleApplicationEventMulticaster as SAEM #lightblue
+end box
+participant BeanFactory as BF
+box "<font size=25>Spring Framework" #pink
+participant ApplicationContext as AC
+participant SimpleApplicationEventMulticaster as SAEM2 #FF5533
+end box
+
+group#gold ① Spring Boot 监听器添加到广播器
+    autonumber 1.1
+    SA -> SA: initialize
+    activate SA
+    SA -> AL: getSpringFactoriesInstances
+    AL -> AL: spring.factories
+    AL -> SA: 赋值 this.listeners
+    deactivate SA
+    ||30||
+    autonumber 2.1
+    SA -> EPRL: getRunListeners 构造
+    activate EPRL
+    EPRL -> SAEM ++ #blue : new
+    'activate SAEM
+    return 赋值 this.multicaster
+    'deactivate SAEM
+    ||30||
+    autonumber 3.1
+    EPRL -> SA: getListeners
+    SA -> EPRL: 返回 this.listeners
+    EPRL -> SAEM: 循环调用 addApplicationListener
+    SAEM -> SAEM: this.defaultRetriever 追加
+    deactivate EPRL
+end
+
+group#gold ② Spring Boot 监听器添加到 ApplicationContext
+    autonumber 4.1
+    SA -> EPRL: contextLoaded
+    activate SA
+    EPRL -> SA: getListeners
+    SA -> EPRL: 返回 this.listeners
+    EPRL -> AC: 循环调用 addApplicationListener
+    AC -> AC: 添加到 this.applicationListeners
+    deactivate SA
+end
+
+group#gold ③ BeanFactory 获取广播器
+    autonumber 5.1
+    AC -> AC: refresh
+    activate AC
+    AC -> AC: initApplicationEventMulticaster
+    AC -> SAEM2 ++ #FF5533 : new
+    SAEM2 -[#FF5533]> AC : 赋值 this.applicationEventMulticaster
+
+
+end
+group#gold ④ Spring 监听器添加到广播器
+    autonumber 6.1
+    AC -> AC: registerListeners
+    AC -> AC: getApplicationListeners\n获取 this.applicationListeners
+    AC -> SAEM2: 循环调用\naddApplicationListener
+    SAEM2 -> SAEM2: this.defaultRetriever 追加
+    AC -> BF: getBeanNamesForType\n获取监听器类型的 Bean 名称
+    BF -> AC: 返回 ApplicationListener\nBean 名称数组
+    AC -> SAEM2: 循环调用\naddApplicationListenerBean
+    SAEM2 -> SAEM2: this.defaultRetriever 追加
+end
+@enduml
