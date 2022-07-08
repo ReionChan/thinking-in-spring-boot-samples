@@ -51,7 +51,7 @@ group#gold ② Spring Boot 监听器添加到 ApplicationContext
     deactivate SA
 end
 
-group#gold ③ BeanFactory 获取广播器
+group#gold ③ 初始化广播器
     autonumber 5.1
     AC -> AC: refresh
     activate AC
