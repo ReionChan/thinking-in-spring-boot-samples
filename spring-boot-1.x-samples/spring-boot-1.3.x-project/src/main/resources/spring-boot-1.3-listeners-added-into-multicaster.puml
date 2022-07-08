@@ -80,6 +80,5 @@ group#gold ⑤ Spring 监听器添加到广播器
     BF -> AC: 返回 ApplicationListener\nBean 名称数组
     AC -> SAEM2: 循环调用\naddApplicationListenerBean
     SAEM2 -> SAEM2: this.defaultRetriever 追加
-    deactivate AC
 end
 @enduml
