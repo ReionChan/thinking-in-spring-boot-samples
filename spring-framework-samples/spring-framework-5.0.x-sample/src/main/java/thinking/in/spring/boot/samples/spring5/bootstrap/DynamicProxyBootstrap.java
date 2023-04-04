@@ -16,6 +16,8 @@
  */
 package thinking.in.spring.boot.samples.spring5.bootstrap;
 
+import org.springframework.aop.framework.ProxyFactory;
+import org.springframework.aop.support.DelegatingIntroductionInterceptor;
 import org.springframework.cglib.proxy.CallbackFilter;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
@@ -247,6 +249,9 @@ public class DynamicProxyBootstrap {
         studentProxy.eat();
         studentProxy.study();
         // 动态代理使学生类具备飞行的行为，很有趣！
+        // Spring AOP 中把这种运行时为某个类对象增加额外功能的操作称为引入 Introduction。
+        //  下文讲解 Spring AOP 时将会使用 Spring AOP API 形式实现目前 CGLIB API 的引入操作。
+        // （织入作用的是连接点方法，引入作用的是类）
         ((Flyable) studentProxy).fly();
         System.out.println(studentProxy.getName());
     }
@@ -293,6 +298,10 @@ public class DynamicProxyBootstrap {
      *      Spring AOP 织入是将运行时对象符合切入点的连接点增加通知，生成动态代理对象的过程。
      *      AspectJ 织入是将目标字节码符合切入点的连接点上增加通知，编译生成最终字节码的过程。
      *
+     * Introduction（引入）：
+     *      运行时为某个类对象增加额外功能的操作称为引入 Introduction。
+     *      引入作用范围是类，织入作用范围是方法。
+     *
      *  Aspect （切面）：
      *      汇聚许多切入点及切入点关联的多个通知，从而完成特定功能的域对象，被称作切面。
      *
@@ -309,8 +318,34 @@ public class DynamicProxyBootstrap {
         // 解决办法：
         //   将 @EnableAspectJAutoProxy 注解 proxyTargetClass 设置为 true，强制使用 CGLIB 动态代理
         Student student = (Student) context.getBean("student");
-//        student.setName("王五");
         student.giveASpeech();
+
+        System.out.println("\n-----Spring AOP 实现引入，让 Student 具备飞行能力-------\n");
+
+        /*
+         * 此处本可以直接使用 new 对象，不用容器中的 student、plane 单例 Bean
+         * 但为了验证经过 CGLIB 代理过后的对象是否还能继续被 CGLIB 动态代理，故注释。
+         * 结果：
+         *      经过 CGLIB 提升的实例，是可以继续被 CGLIB、JDK 动态代理
+         */
+        //Student stu = new Student("王五");
+        //Plane plane = new Plane("B737", stu);
+
+        // 使用容器中的 CGLIB 代理的 Plane
+        Plane plane = (Plane) context.getBean("plane");
+        // 使用容器中的 CGLIB 代理的 Student
+        ProxyFactory proxyFactory = new ProxyFactory(student);
+
+        // 指定 CGLIB 动态代理，否则会由于 Student 有接口走 JDK 动态代理，使得代理对象无法转换成 Student 类型
+        proxyFactory.setProxyTargetClass(true);
+        // 动态引人 Flyable 飞行能力
+        proxyFactory.addInterface(Flyable.class);
+        // 添加通知，此处使用代理引入拦截器通知类型
+        proxyFactory.addAdvice(new DelegatingIntroductionInterceptor(plane));
+        Human studentProxy = (Human) proxyFactory.getProxy();
+        // 由于被引入的对象 plane 是容器中的 Advised 被通知对象，故此处执 fly 方法会执行所有切入点关联的通知
+        ((Flyable) studentProxy).fly();
+
         context.close();
     }
 

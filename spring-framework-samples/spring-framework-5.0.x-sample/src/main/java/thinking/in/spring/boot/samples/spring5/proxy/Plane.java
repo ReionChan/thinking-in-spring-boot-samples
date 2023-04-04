@@ -1,5 +1,7 @@
 package thinking.in.spring.boot.samples.spring5.proxy;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,9 +15,9 @@ public class Plane implements Flyable {
     // 乘客
     private Human passenger;
 
-    public Plane() {}
-
-    public Plane(String type, Human human) {
+    // 这里会使用构造方法形式的自动注入 human，先 By Type 再 By Name
+    @Autowired
+    public Plane(@Value("C919") String type, Human human) {
         this.type = type;
         this.passenger = human;
     }
@@ -31,5 +33,13 @@ public class Plane implements Flyable {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Human getPassenger() {
+        return passenger;
+    }
+
+    public void setPassenger(Human passenger) {
+        this.passenger = passenger;
     }
 }
