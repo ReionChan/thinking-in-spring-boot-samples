@@ -18,17 +18,16 @@ package thinking.in.spring.boot.samples.spring5.bootstrap;
 
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.*;
+import org.springframework.stereotype.Component;
 import thinking.in.spring.boot.samples.spring5.bean.ServiceA;
-import thinking.in.spring.boot.samples.spring5.bean.TransactionalServiceBean;
 
 /**
- * {@link TransactionalServiceBean} 引导类
+ * {@link CircularDependencyBootstrap} 引导类
  *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @since 1.0.0
  */
-@Configuration
-@ComponentScan
+@Component
+@ComponentScan(basePackageClasses = ServiceA.class)
 @EnableAspectJAutoProxy
 public class CircularDependencyBootstrap {
 
