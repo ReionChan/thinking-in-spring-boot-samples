@@ -37,6 +37,9 @@ public class LoggerAspect {
 
     /**
      * 方法执行前通知
+     *
+     * Spring 会把 ProceedingJoinPoint 暴露给通知方法的参数，如果不需此参数可以不在方法参数中声明 (下面所有的通知类似)
+     * 如果想要暴露自定义参数，那么在切入点表达式中使用 {@code args} 明确指定参数名称，例如：args(foo, bar)
      */
     @Before("pointcut()")
     public void beforeAdvice() {
