@@ -309,7 +309,7 @@ public class DynamicProxyBootstrap {
         // 解决办法：
         //   将 @EnableAspectJAutoProxy 注解 proxyTargetClass 设置为 true，强制使用 CGLIB 动态代理
         Student student = (Student) context.getBean("student");
-        student.setName("王五");
+//        student.setName("王五");
         student.giveASpeech();
         context.close();
     }

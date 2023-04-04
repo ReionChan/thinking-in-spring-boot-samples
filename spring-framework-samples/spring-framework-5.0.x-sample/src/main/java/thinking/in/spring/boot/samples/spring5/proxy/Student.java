@@ -1,5 +1,6 @@
 package thinking.in.spring.boot.samples.spring5.proxy;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,9 +11,10 @@ public class Student implements Human {
 
     private String name;
 
-    public Student() {}
+    // public Student() {}
 
-    public Student(String name) {
+    // 若注释掉无参构造方法，生成单例 Bean 时，指定默认名字为 马六
+    public Student(@Value(value = "马六") String name) {
         this.name = name;
     }
 
