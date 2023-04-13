@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.springframework.web.context.support.StandardServletEnvironment</OriginalElement>
+  <nodes>
+    <node x="1075.5" y="0.0">org.springframework.core.convert.support.ConfigurableConversionService</node>
+    <node x="0.0" y="1795.0">org.springframework.core.env.PropertySource</node>
+    <node x="214.5" y="1648.0">org.springframework.web.context.support.StandardServletEnvironment</node>
+    <node x="476.25" y="286.0">org.springframework.core.env.ConfigurablePropertyResolver</node>
+    <node x="1010.5" y="108.0">org.springframework.core.convert.support.GenericConversionService</node>
+    <node x="71.5" y="1538.0">org.springframework.core.env.StandardEnvironment</node>
+    <node x="1585.0" y="0.0">org.springframework.core.env.PropertySources</node>
+    <node x="417.0" y="1110.0">org.springframework.web.context.ConfigurableWebEnvironment</node>
+    <node x="239.5" y="550.0">org.springframework.core.env.ConfigurableEnvironment</node>
+    <node x="347.5" y="0.0">org.springframework.core.env.PropertyResolver</node>
+    <node x="198.25" y="341.0">org.springframework.core.env.Environment</node>
+    <node x="1547.5" y="132.0">org.springframework.core.env.MutablePropertySources</node>
+    <node x="0.0" y="792.0">org.springframework.core.env.AbstractEnvironment</node>
+    <node x="582.5" y="573.0">org.springframework.core.env.PropertySourcesPropertyResolver</node>
+    <node x="1088.0" y="502.0">org.springframework.core.convert.support.DefaultConversionService</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.web.context.ConfigurableWebEnvironment" target="org.springframework.core.env.ConfigurableEnvironment">
+      <point x="0.0" y="-30.0" />
+      <point x="603.5" y="767.0" />
+      <point x="481.75" y="767.0" />
+      <point x="80.75" y="96.0" />
+    </edge>
+    <edge source="org.springframework.core.env.Environment" target="org.springframework.core.env.PropertyResolver">
+      <point x="0.0" y="-52.0" />
+      <point x="320.25" y="261.0" />
+      <point x="422.5" y="261.0" />
+      <point x="-75.0" y="118.0" />
+    </edge>
+    <edge source="org.springframework.core.env.AbstractEnvironment" target="org.springframework.core.env.ConfigurableEnvironment">
+      <point x="0.0" y="-348.0" />
+      <point x="198.5" y="767.0" />
+      <point x="320.25" y="767.0" />
+      <point x="-80.75" y="96.0" />
+    </edge>
+    <edge source="org.springframework.core.convert.support.GenericConversionService" target="org.springframework.core.convert.support.ConfigurableConversionService">
+      <point x="0.0" y="-172.0" />
+      <point x="0.0" y="29.0" />
+    </edge>
+    <edge source="org.springframework.core.env.StandardEnvironment" target="org.springframework.core.env.AbstractEnvironment">
+      <point x="0.0" y="-30.0" />
+      <point x="0.0" y="348.0" />
+    </edge>
+    <edge source="org.springframework.core.env.ConfigurableEnvironment" target="org.springframework.core.env.ConfigurablePropertyResolver">
+      <point x="80.75" y="-96.0" />
+      <point x="481.75" y="525.0" />
+      <point x="575.5" y="525.0" />
+      <point x="-99.25" y="107.0" />
+    </edge>
+    <edge source="org.springframework.core.convert.support.DefaultConversionService" target="org.springframework.core.convert.support.GenericConversionService">
+      <point x="0.0" y="-73.0" />
+      <point x="0.0" y="172.0" />
+    </edge>
+    <edge source="org.springframework.core.env.ConfigurableEnvironment" target="org.springframework.core.env.Environment">
+      <point x="-80.75" y="-96.0" />
+      <point x="0.0" y="52.0" />
+    </edge>
+    <edge source="org.springframework.core.env.ConfigurablePropertyResolver" target="org.springframework.core.env.PropertyResolver">
+      <point x="0.0" y="-107.0" />
+      <point x="674.75" y="261.0" />
+      <point x="572.5" y="261.0" />
+      <point x="75.0" y="118.0" />
+    </edge>
+    <edge source="org.springframework.web.context.support.StandardServletEnvironment" target="org.springframework.core.env.StandardEnvironment">
+      <point x="-93.25" y="-51.0" />
+      <point x="307.75" y="1623.0" />
+      <point x="198.5" y="1623.0" />
+      <point x="0.0" y="30.0" />
+    </edge>
+    <edge source="org.springframework.core.env.PropertySourcesPropertyResolver" target="org.springframework.core.env.ConfigurablePropertyResolver">
+      <point x="0.0" y="-73.0" />
+      <point x="99.25" y="107.0" />
+    </edge>
+    <edge source="org.springframework.core.env.MutablePropertySources" target="org.springframework.core.env.PropertySources">
+      <point x="0.0" y="-183.0" />
+      <point x="0.0" y="41.0" />
+    </edge>
+    <edge source="org.springframework.web.context.support.StandardServletEnvironment" target="org.springframework.web.context.ConfigurableWebEnvironment">
+      <point x="93.25" y="-51.0" />
+      <point x="494.25" y="1623.0" />
+      <point x="603.5" y="1623.0" />
+      <point x="0.0" y="30.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7295833333333333" x="772.9999999999999" y="851.0451170759567" />
+  <SelectedNodes>
+    <node>org.springframework.core.convert.support.GenericConversionService</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
